@@ -65,26 +65,36 @@ public struct CameraSnapshot: Sendable, Codable {
         public let frame: Int
         /// Evaluated world matrix at that frame.
         public let matrixWorld: simd_double4x4
+        /// Focal length in millimeters at this frame (animated `camera.data.lens`).
+        public let focalLength: Double
+        /// Vertical FOV in degrees at this frame, recomputed from animated intrinsics.
+        public let verticalFov: Double
 
-        private enum CodingKeys: String, CodingKey { case frame, matrixWorld }
+        private enum CodingKeys: String, CodingKey { case frame, matrixWorld, focalLength, verticalFov }
 
         public init(from decoder: Decoder) throws {
             let c = try decoder.container(keyedBy: CodingKeys.self)
             self.frame = try c.decode(Int.self, forKey: .frame)
             let row = try c.decode([Double].self, forKey: .matrixWorld)
             self.matrixWorld = Self.matrix(from: row)
+            self.focalLength = try c.decodeIfPresent(Double.self, forKey: .focalLength) ?? 50.0
+            self.verticalFov = try c.decodeIfPresent(Double.self, forKey: .verticalFov) ?? 39.6
         }
 
         public func encode(to encoder: Encoder) throws {
             var c = encoder.container(keyedBy: CodingKeys.self)
             try c.encode(frame, forKey: .frame)
             try c.encode(Self.flatten(matrixWorld), forKey: .matrixWorld)
+            try c.encode(focalLength, forKey: .focalLength)
+            try c.encode(verticalFov, forKey: .verticalFov)
         }
 
         /// Memberwise initializer.
-        public init(frame: Int, matrixWorld: simd_double4x4) {
+        public init(frame: Int, matrixWorld: simd_double4x4, focalLength: Double = 50.0, verticalFov: Double = 39.6) {
             self.frame = frame
             self.matrixWorld = matrixWorld
+            self.focalLength = focalLength
+            self.verticalFov = verticalFov
         }
 
         static func matrix(from row: [Double]) -> simd_double4x4 {

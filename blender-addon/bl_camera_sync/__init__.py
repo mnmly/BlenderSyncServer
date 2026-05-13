@@ -166,13 +166,20 @@ def _bake_camera_matrices(scene, camera, start, end, explicit_only):
     else:
         frames = range(start, end + 1)
 
+    render_aspect = scene.render.resolution_x / max(scene.render.resolution_y, 1)
     try:
         for frame in frames:
             scene.frame_set(frame)
             depsgraph = bpy.context.evaluated_depsgraph_get()
             cam_eval = camera.evaluated_get(depsgraph)
             mat = [v for row in cam_eval.matrix_world for v in row]
-            matrices.append({"frame": frame, "matrix_world": mat})
+            cam_data_eval = cam_eval.data
+            matrices.append({
+                "frame": frame,
+                "matrix_world": mat,
+                "focal_length": cam_data_eval.lens,
+                "vertical_fov": _compute_vertical_fov_degrees(cam_data_eval, render_aspect),
+            })
     finally:
         scene.frame_set(original_frame)
 
@@ -779,6 +786,32 @@ classes = (
 )
 
 
+@bpy.app.handlers.persistent
+def _on_frame_change_post(scene, depsgraph=None):
+    """Push a camera snapshot every time Blender's playhead moves.
+
+    The periodic Auto Sync timer dedups on camera transform/intrinsics and
+    intentionally ignores ``frame``, so frame-only changes (scrubbing the
+    timeline without touching the camera) would never reach clients without
+    this handler. Bypasses the dedup so consumers always see the new frame.
+    """
+    try:
+        props = scene.camera_sync_props
+    except AttributeError:
+        return
+    if not (props.auto_sync and props.is_connected):
+        return
+    data = snapshot_camera(with_baked_keyframes=False)
+    if data is None:
+        return
+    camera_sync_manager.last_dedup_key = _camera_dedup_key(data)
+    camera_sync_manager.enqueue({
+        "type": "camera_update",
+        "payload": data,
+        "timestamp": time.time(),
+    })
+
+
 def register():
     """Register operators, panel, and the scene-level ``camera_sync_props`` pointer.
 
@@ -787,10 +820,14 @@ def register():
     for cls in classes:
         bpy.utils.register_class(cls)
     bpy.types.Scene.camera_sync_props = bpy.props.PointerProperty(type=CameraSyncProperties)
+    if _on_frame_change_post not in bpy.app.handlers.frame_change_post:
+        bpy.app.handlers.frame_change_post.append(_on_frame_change_post)
 
 
 def unregister():
     """Tear down the websocket connection and undo :func:`register`."""
+    if _on_frame_change_post in bpy.app.handlers.frame_change_post:
+        bpy.app.handlers.frame_change_post.remove(_on_frame_change_post)
     camera_sync_manager.stop_connection()
     for cls in classes:
         bpy.utils.unregister_class(cls)
