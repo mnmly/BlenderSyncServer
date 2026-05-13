@@ -1,0 +1,23 @@
+{
+  "name": "debug-websocket-server",
+  "version": "1.0.0",
+  "description": "Simple Socket.IO server for debugging WebSocket connections",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "raw": "node raw-websocket-server.js",
+    "dev": "nodemon server.js",
+    "dev-raw": "nodemon raw-websocket-server.js"
+  },
+  "dependencies": {
+    "socket.io": "^4.7.2",
+    "express": "^4.18.2",
+    "ws": "^8.14.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "keywords": ["websocket", "socket.io", "debug", "server"],
+  "author": "Debug Server",
+  "license": "MIT"
+}
