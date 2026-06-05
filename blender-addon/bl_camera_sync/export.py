@@ -148,8 +148,9 @@ def _export_constraint(c):
 # Anything outside this set (or with a bone subtarget / non-OBJECT parent /
 # drivers / fcurve modifiers) forces the baked-matrix fallback.
 _SOLVED_CONSTRAINTS = frozenset({
-    "CHILD_OF", "COPY_LOCATION", "COPY_SCALE", "COPY_TRANSFORMS",
-    "TRACK_TO", "DAMPED_TRACK", "LIMIT_LOCATION", "LIMIT_SCALE",
+    "CHILD_OF", "COPY_LOCATION", "COPY_ROTATION", "COPY_SCALE", "COPY_TRANSFORMS",
+    "TRACK_TO", "DAMPED_TRACK", "LOCKED_TRACK",
+    "LIMIT_LOCATION", "LIMIT_ROTATION", "LIMIT_SCALE",
 })
 
 

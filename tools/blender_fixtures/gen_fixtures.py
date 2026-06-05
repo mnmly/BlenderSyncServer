@@ -293,6 +293,53 @@ def scene_damped_track():
     return "damped_track"
 
 
+def scene_copy_rotation():
+    """Cube with Copy Rotation → a keyed empty (all axes, REPLACE)."""
+    reset_scene()
+    target = add_empty("Target", location=(0, 0, 0))
+    key(target, "rotation_euler", FRAME_START)
+    target.rotation_euler = (math.radians(40), math.radians(25), math.radians(70))
+    key(target, "rotation_euler", FRAME_END)
+
+    cube = add_cube("Rotator", location=(0, 0, 0))
+    cube.location = (1, 1, 1)   # kept (only rotation copied)
+    cube.scale = (1.3, 0.8, 1.0)
+    con = cube.constraints.new(type='COPY_ROTATION')
+    con.target = target
+    return "copy_rotation"
+
+
+def scene_locked_track():
+    """Cube with Locked Track (lock Z, track Y) → a keyed empty."""
+    reset_scene()
+    target = add_empty("Target", location=(4, 0, 0))
+    key(target, "location", FRAME_START)
+    target.location = (3, 5, 2)
+    key(target, "location", FRAME_END)
+
+    cube = add_cube("Locker", location=(0, 0, 0))
+    con = cube.constraints.new(type='LOCKED_TRACK')
+    con.target = target
+    con.track_axis = 'TRACK_Y'
+    con.lock_axis = 'LOCK_Z'
+    return "locked_track"
+
+
+def scene_limit_rotation():
+    """Cube rotating past a cap, clamped by Limit Rotation (Z)."""
+    reset_scene()
+    cube = add_cube("Limited", location=(0, 0, 0))
+    key(cube, "rotation_euler", FRAME_START)
+    cube.rotation_euler = (0, 0, math.radians(120))
+    key(cube, "rotation_euler", FRAME_END)
+    con = cube.constraints.new(type='LIMIT_ROTATION')
+    con.use_limit_z = True
+    con.min_z = 0.0
+    con.max_z = math.radians(45)
+    con.owner_space = 'WORLD'
+    return "limit_rotation"
+
+
 def scene_driver():
     """Cube whose X is driven by a keyed empty's X (baked fallback)."""
     reset_scene()
@@ -324,9 +371,12 @@ SCENES = [
     scene_copy_location,
     scene_copy_transforms,
     scene_copy_scale,
+    scene_copy_rotation,
     scene_child_of,
     scene_damped_track,
+    scene_locked_track,
     scene_limit_location,
+    scene_limit_rotation,
     scene_limit_scale,
     scene_driver,
 ]
