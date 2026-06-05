@@ -34,6 +34,8 @@ public enum BlenderMessage: Sendable {
     case cameraCurves(CameraCurves)
     /// Scene-level render and frame range info (`scene_update`).
     case sceneInfo(SceneInfo)
+    /// An animated object graph for the WABF Core transform engine (`object_graph`).
+    case objectGraph(ObjectGraph)
     /// A message whose `type` is not recognized by this version of the server.
     case unknown(type: String)
 
@@ -43,6 +45,7 @@ public enum BlenderMessage: Sendable {
         case .cameraSnapshot: return "camera_update"
         case .cameraCurves:   return "camera_curves"
         case .sceneInfo:      return "scene_update"
+        case .objectGraph:    return "object_graph"
         case .unknown(let t): return t
         }
     }
@@ -61,6 +64,8 @@ extension BlenderMessage: Codable {
             self = .cameraCurves(try c.decode(CameraCurves.self, forKey: .payload))
         case "scene_update":
             self = .sceneInfo(try c.decode(SceneInfo.self, forKey: .payload))
+        case "object_graph":
+            self = .objectGraph(try c.decode(ObjectGraph.self, forKey: .payload))
         default:
             self = .unknown(type: type)
         }
@@ -74,6 +79,7 @@ extension BlenderMessage: Codable {
         case .cameraSnapshot(let v): try c.encode(v, forKey: .payload)
         case .cameraCurves(let v):   try c.encode(v, forKey: .payload)
         case .sceneInfo(let v):      try c.encode(v, forKey: .payload)
+        case .objectGraph(let v):    try c.encode(v, forKey: .payload)
         case .unknown:               break
         }
     }
@@ -87,6 +93,7 @@ public struct BlenderLatestState: Sendable {
     public var cameraSnapshot: CameraSnapshot?
     public var cameraCurves: CameraCurves?
     public var sceneInfo: SceneInfo?
+    public var objectGraph: ObjectGraph?
 }
 
 // MARK: - Server
@@ -189,6 +196,7 @@ public actor BlenderSyncServer {
         case .cameraSnapshot(let v): latest.cameraSnapshot = v
         case .cameraCurves(let v):   latest.cameraCurves = v
         case .sceneInfo(let v):      latest.sceneInfo = v
+        case .objectGraph(let v):    latest.objectGraph = v
         case .unknown(let t):        logger.debug("unknown message type: \(t)")
         }
         for (_, c) in subscribers { c.yield(message) }

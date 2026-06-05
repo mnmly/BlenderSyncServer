@@ -1,0 +1,4623 @@
+{
+ "scene": "euler_orders",
+ "wire": {
+  "frame_start": 1,
+  "frame_end": 12,
+  "fps": 24.0,
+  "render_width": 1920,
+  "render_height": 1080,
+  "render_aspect": 1.7777777777777777,
+  "objects": [
+   {
+    "name": "Cube_XYZ",
+    "id": "Cube_XYZ",
+    "type": "MESH",
+    "rotation_mode": "XYZ",
+    "base": {
+     "location": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "scale": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "rotation_euler": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation_quaternion": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation_axis_angle": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+     ],
+     "delta_location": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "delta_scale": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "delta_rotation_euler": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "delta_rotation_quaternion": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "matrix_local": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ],
+     "matrix_world": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ]
+    },
+    "parent": null,
+    "parent_inverse": [
+     1.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    "parent_type": "OBJECT",
+    "constraints": [],
+    "fcurves": [
+     {
+      "source": "object",
+      "data_path": "location",
+      "array_index": 0,
+      "extrapolation": "CONSTANT",
+      "has_modifiers": false,
+      "keyframes": [
+       {
+        "frame": 1.0,
+        "value": 0.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         -2.6666667461395264,
+         0.0
+        ],
+        "handle_right": [
+         4.6666669845581055,
+         0.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       },
+       {
+        "frame": 12.0,
+        "value": 1.5,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         8.333333015441895,
+         1.5
+        ],
+        "handle_right": [
+         15.666666984558105,
+         1.5
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       }
+      ]
+     },
+     {
+      "source": "object",
+      "data_path": "location",
+      "array_index": 1,
+      "extrapolation": "CONSTANT",
+      "has_modifiers": false,
+      "keyframes": [
+       {
+        "frame": 1.0,
+        "value": 0.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         -2.6666667461395264,
+         0.0
+        ],
+        "handle_right": [
+         4.6666669845581055,
+         0.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       },
+       {
+        "frame": 12.0,
+        "value": 2.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         8.333333015441895,
+         2.0
+        ],
+        "handle_right": [
+         15.666666984558105,
+         2.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       }
+      ]
+     },
+     {
+      "source": "object",
+      "data_path": "location",
+      "array_index": 2,
+      "extrapolation": "CONSTANT",
+      "has_modifiers": false,
+      "keyframes": [
+       {
+        "frame": 1.0,
+        "value": 0.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         -2.6666667461395264,
+         0.0
+        ],
+        "handle_right": [
+         4.6666669845581055,
+         0.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       },
+       {
+        "frame": 12.0,
+        "value": -1.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         8.333333015441895,
+         -1.0
+        ],
+        "handle_right": [
+         15.666666984558105,
+         -1.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       }
+      ]
+     },
+     {
+      "source": "object",
+      "data_path": "rotation_euler",
+      "array_index": 0,
+      "extrapolation": "CONSTANT",
+      "has_modifiers": false,
+      "keyframes": [
+       {
+        "frame": 1.0,
+        "value": 0.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         -2.6666667461395264,
+         0.0
+        ],
+        "handle_right": [
+         4.6666669845581055,
+         0.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       },
+       {
+        "frame": 12.0,
+        "value": 0.6108652353286743,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         8.333333015441895,
+         0.6108652353286743
+        ],
+        "handle_right": [
+         15.666666984558105,
+         0.6108652353286743
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       }
+      ]
+     },
+     {
+      "source": "object",
+      "data_path": "rotation_euler",
+      "array_index": 1,
+      "extrapolation": "CONSTANT",
+      "has_modifiers": false,
+      "keyframes": [
+       {
+        "frame": 1.0,
+        "value": 0.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         -2.6666667461395264,
+         0.0
+        ],
+        "handle_right": [
+         4.6666669845581055,
+         0.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       },
+       {
+        "frame": 12.0,
+        "value": 0.8726646304130554,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         8.333333015441895,
+         0.8726646304130554
+        ],
+        "handle_right": [
+         15.666666984558105,
+         0.8726646304130554
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       }
+      ]
+     },
+     {
+      "source": "object",
+      "data_path": "rotation_euler",
+      "array_index": 2,
+      "extrapolation": "CONSTANT",
+      "has_modifiers": false,
+      "keyframes": [
+       {
+        "frame": 1.0,
+        "value": 0.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         -2.6666667461395264,
+         0.0
+        ],
+        "handle_right": [
+         4.6666669845581055,
+         0.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       },
+       {
+        "frame": 12.0,
+        "value": 0.3490658402442932,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         8.333333015441895,
+         0.3490658402442932
+        ],
+        "handle_right": [
+         15.666666984558105,
+         0.3490658402442932
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       }
+      ]
+     },
+     {
+      "source": "object",
+      "data_path": "scale",
+      "array_index": 0,
+      "extrapolation": "CONSTANT",
+      "has_modifiers": false,
+      "keyframes": [
+       {
+        "frame": 1.0,
+        "value": 1.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         -2.6666667461395264,
+         1.0
+        ],
+        "handle_right": [
+         4.6666669845581055,
+         1.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       },
+       {
+        "frame": 12.0,
+        "value": 1.5,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         8.333333015441895,
+         1.5
+        ],
+        "handle_right": [
+         15.666666984558105,
+         1.5
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       }
+      ]
+     },
+     {
+      "source": "object",
+      "data_path": "scale",
+      "array_index": 1,
+      "extrapolation": "CONSTANT",
+      "has_modifiers": false,
+      "keyframes": [
+       {
+        "frame": 1.0,
+        "value": 1.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         -2.6666667461395264,
+         1.0
+        ],
+        "handle_right": [
+         4.6666669845581055,
+         1.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       },
+       {
+        "frame": 12.0,
+        "value": 0.800000011920929,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         8.333333015441895,
+         0.800000011920929
+        ],
+        "handle_right": [
+         15.666666984558105,
+         0.800000011920929
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       }
+      ]
+     },
+     {
+      "source": "object",
+      "data_path": "scale",
+      "array_index": 2,
+      "extrapolation": "CONSTANT",
+      "has_modifiers": false,
+      "keyframes": [
+       {
+        "frame": 1.0,
+        "value": 1.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         -2.6666667461395264,
+         1.0
+        ],
+        "handle_right": [
+         4.6666669845581055,
+         1.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       },
+       {
+        "frame": 12.0,
+        "value": 1.2000000476837158,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         8.333333015441895,
+         1.2000000476837158
+        ],
+        "handle_right": [
+         15.666666984558105,
+         1.2000000476837158
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       }
+      ]
+     }
+    ],
+    "baked": null,
+    "needs_bake": false
+   },
+   {
+    "name": "Cube_XZY",
+    "id": "Cube_XZY",
+    "type": "MESH",
+    "rotation_mode": "XZY",
+    "base": {
+     "location": [
+      3.0,
+      0.0,
+      0.0
+     ],
+     "scale": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "rotation_euler": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation_quaternion": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation_axis_angle": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+     ],
+     "delta_location": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "delta_scale": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "delta_rotation_euler": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "delta_rotation_quaternion": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "matrix_local": [
+      1.0,
+      0.0,
+      0.0,
+      3.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ],
+     "matrix_world": [
+      1.0,
+      0.0,
+      0.0,
+      3.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ]
+    },
+    "parent": null,
+    "parent_inverse": [
+     1.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    "parent_type": "OBJECT",
+    "constraints": [],
+    "fcurves": [
+     {
+      "source": "object",
+      "data_path": "location",
+      "array_index": 0,
+      "extrapolation": "CONSTANT",
+      "has_modifiers": false,
+      "keyframes": [
+       {
+        "frame": 1.0,
+        "value": 3.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         -2.6666667461395264,
+         3.0
+        ],
+        "handle_right": [
+         4.6666669845581055,
+         3.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       },
+       {
+        "frame": 12.0,
+        "value": 4.5,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         8.333333015441895,
+         4.5
+        ],
+        "handle_right": [
+         15.666666984558105,
+         4.5
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       }
+      ]
+     },
+     {
+      "source": "object",
+      "data_path": "location",
+      "array_index": 1,
+      "extrapolation": "CONSTANT",
+      "has_modifiers": false,
+      "keyframes": [
+       {
+        "frame": 1.0,
+        "value": 0.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         -2.6666667461395264,
+         0.0
+        ],
+        "handle_right": [
+         4.6666669845581055,
+         0.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       },
+       {
+        "frame": 12.0,
+        "value": 2.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         8.333333015441895,
+         2.0
+        ],
+        "handle_right": [
+         15.666666984558105,
+         2.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       }
+      ]
+     },
+     {
+      "source": "object",
+      "data_path": "location",
+      "array_index": 2,
+      "extrapolation": "CONSTANT",
+      "has_modifiers": false,
+      "keyframes": [
+       {
+        "frame": 1.0,
+        "value": 0.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         -2.6666667461395264,
+         0.0
+        ],
+        "handle_right": [
+         4.6666669845581055,
+         0.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       },
+       {
+        "frame": 12.0,
+        "value": -1.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         8.333333015441895,
+         -1.0
+        ],
+        "handle_right": [
+         15.666666984558105,
+         -1.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       }
+      ]
+     },
+     {
+      "source": "object",
+      "data_path": "rotation_euler",
+      "array_index": 0,
+      "extrapolation": "CONSTANT",
+      "has_modifiers": false,
+      "keyframes": [
+       {
+        "frame": 1.0,
+        "value": 0.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         -2.6666667461395264,
+         0.0
+        ],
+        "handle_right": [
+         4.6666669845581055,
+         0.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       },
+       {
+        "frame": 12.0,
+        "value": 0.6108652353286743,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         8.333333015441895,
+         0.6108652353286743
+        ],
+        "handle_right": [
+         15.666666984558105,
+         0.6108652353286743
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       }
+      ]
+     },
+     {
+      "source": "object",
+      "data_path": "rotation_euler",
+      "array_index": 1,
+      "extrapolation": "CONSTANT",
+      "has_modifiers": false,
+      "keyframes": [
+       {
+        "frame": 1.0,
+        "value": 0.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         -2.6666667461395264,
+         0.0
+        ],
+        "handle_right": [
+         4.6666669845581055,
+         0.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       },
+       {
+        "frame": 12.0,
+        "value": 0.8726646304130554,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         8.333333015441895,
+         0.8726646304130554
+        ],
+        "handle_right": [
+         15.666666984558105,
+         0.8726646304130554
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       }
+      ]
+     },
+     {
+      "source": "object",
+      "data_path": "rotation_euler",
+      "array_index": 2,
+      "extrapolation": "CONSTANT",
+      "has_modifiers": false,
+      "keyframes": [
+       {
+        "frame": 1.0,
+        "value": 0.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         -2.6666667461395264,
+         0.0
+        ],
+        "handle_right": [
+         4.6666669845581055,
+         0.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       },
+       {
+        "frame": 12.0,
+        "value": 0.3490658402442932,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         8.333333015441895,
+         0.3490658402442932
+        ],
+        "handle_right": [
+         15.666666984558105,
+         0.3490658402442932
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       }
+      ]
+     },
+     {
+      "source": "object",
+      "data_path": "scale",
+      "array_index": 0,
+      "extrapolation": "CONSTANT",
+      "has_modifiers": false,
+      "keyframes": [
+       {
+        "frame": 1.0,
+        "value": 1.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         -2.6666667461395264,
+         1.0
+        ],
+        "handle_right": [
+         4.6666669845581055,
+         1.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       },
+       {
+        "frame": 12.0,
+        "value": 1.5,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         8.333333015441895,
+         1.5
+        ],
+        "handle_right": [
+         15.666666984558105,
+         1.5
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       }
+      ]
+     },
+     {
+      "source": "object",
+      "data_path": "scale",
+      "array_index": 1,
+      "extrapolation": "CONSTANT",
+      "has_modifiers": false,
+      "keyframes": [
+       {
+        "frame": 1.0,
+        "value": 1.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         -2.6666667461395264,
+         1.0
+        ],
+        "handle_right": [
+         4.6666669845581055,
+         1.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       },
+       {
+        "frame": 12.0,
+        "value": 0.800000011920929,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         8.333333015441895,
+         0.800000011920929
+        ],
+        "handle_right": [
+         15.666666984558105,
+         0.800000011920929
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       }
+      ]
+     },
+     {
+      "source": "object",
+      "data_path": "scale",
+      "array_index": 2,
+      "extrapolation": "CONSTANT",
+      "has_modifiers": false,
+      "keyframes": [
+       {
+        "frame": 1.0,
+        "value": 1.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         -2.6666667461395264,
+         1.0
+        ],
+        "handle_right": [
+         4.6666669845581055,
+         1.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       },
+       {
+        "frame": 12.0,
+        "value": 1.2000000476837158,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         8.333333015441895,
+         1.2000000476837158
+        ],
+        "handle_right": [
+         15.666666984558105,
+         1.2000000476837158
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       }
+      ]
+     }
+    ],
+    "baked": null,
+    "needs_bake": false
+   },
+   {
+    "name": "Cube_YXZ",
+    "id": "Cube_YXZ",
+    "type": "MESH",
+    "rotation_mode": "YXZ",
+    "base": {
+     "location": [
+      6.0,
+      0.0,
+      0.0
+     ],
+     "scale": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "rotation_euler": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation_quaternion": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation_axis_angle": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+     ],
+     "delta_location": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "delta_scale": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "delta_rotation_euler": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "delta_rotation_quaternion": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "matrix_local": [
+      1.0,
+      0.0,
+      0.0,
+      6.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ],
+     "matrix_world": [
+      1.0,
+      0.0,
+      0.0,
+      6.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ]
+    },
+    "parent": null,
+    "parent_inverse": [
+     1.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    "parent_type": "OBJECT",
+    "constraints": [],
+    "fcurves": [
+     {
+      "source": "object",
+      "data_path": "location",
+      "array_index": 0,
+      "extrapolation": "CONSTANT",
+      "has_modifiers": false,
+      "keyframes": [
+       {
+        "frame": 1.0,
+        "value": 6.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         -2.6666667461395264,
+         6.0
+        ],
+        "handle_right": [
+         4.6666669845581055,
+         6.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       },
+       {
+        "frame": 12.0,
+        "value": 7.5,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         8.333333015441895,
+         7.5
+        ],
+        "handle_right": [
+         15.666666984558105,
+         7.5
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       }
+      ]
+     },
+     {
+      "source": "object",
+      "data_path": "location",
+      "array_index": 1,
+      "extrapolation": "CONSTANT",
+      "has_modifiers": false,
+      "keyframes": [
+       {
+        "frame": 1.0,
+        "value": 0.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         -2.6666667461395264,
+         0.0
+        ],
+        "handle_right": [
+         4.6666669845581055,
+         0.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       },
+       {
+        "frame": 12.0,
+        "value": 2.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         8.333333015441895,
+         2.0
+        ],
+        "handle_right": [
+         15.666666984558105,
+         2.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       }
+      ]
+     },
+     {
+      "source": "object",
+      "data_path": "location",
+      "array_index": 2,
+      "extrapolation": "CONSTANT",
+      "has_modifiers": false,
+      "keyframes": [
+       {
+        "frame": 1.0,
+        "value": 0.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         -2.6666667461395264,
+         0.0
+        ],
+        "handle_right": [
+         4.6666669845581055,
+         0.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       },
+       {
+        "frame": 12.0,
+        "value": -1.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         8.333333015441895,
+         -1.0
+        ],
+        "handle_right": [
+         15.666666984558105,
+         -1.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       }
+      ]
+     },
+     {
+      "source": "object",
+      "data_path": "rotation_euler",
+      "array_index": 0,
+      "extrapolation": "CONSTANT",
+      "has_modifiers": false,
+      "keyframes": [
+       {
+        "frame": 1.0,
+        "value": 0.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         -2.6666667461395264,
+         0.0
+        ],
+        "handle_right": [
+         4.6666669845581055,
+         0.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       },
+       {
+        "frame": 12.0,
+        "value": 0.6108652353286743,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         8.333333015441895,
+         0.6108652353286743
+        ],
+        "handle_right": [
+         15.666666984558105,
+         0.6108652353286743
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       }
+      ]
+     },
+     {
+      "source": "object",
+      "data_path": "rotation_euler",
+      "array_index": 1,
+      "extrapolation": "CONSTANT",
+      "has_modifiers": false,
+      "keyframes": [
+       {
+        "frame": 1.0,
+        "value": 0.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         -2.6666667461395264,
+         0.0
+        ],
+        "handle_right": [
+         4.6666669845581055,
+         0.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       },
+       {
+        "frame": 12.0,
+        "value": 0.8726646304130554,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         8.333333015441895,
+         0.8726646304130554
+        ],
+        "handle_right": [
+         15.666666984558105,
+         0.8726646304130554
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       }
+      ]
+     },
+     {
+      "source": "object",
+      "data_path": "rotation_euler",
+      "array_index": 2,
+      "extrapolation": "CONSTANT",
+      "has_modifiers": false,
+      "keyframes": [
+       {
+        "frame": 1.0,
+        "value": 0.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         -2.6666667461395264,
+         0.0
+        ],
+        "handle_right": [
+         4.6666669845581055,
+         0.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       },
+       {
+        "frame": 12.0,
+        "value": 0.3490658402442932,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         8.333333015441895,
+         0.3490658402442932
+        ],
+        "handle_right": [
+         15.666666984558105,
+         0.3490658402442932
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       }
+      ]
+     },
+     {
+      "source": "object",
+      "data_path": "scale",
+      "array_index": 0,
+      "extrapolation": "CONSTANT",
+      "has_modifiers": false,
+      "keyframes": [
+       {
+        "frame": 1.0,
+        "value": 1.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         -2.6666667461395264,
+         1.0
+        ],
+        "handle_right": [
+         4.6666669845581055,
+         1.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       },
+       {
+        "frame": 12.0,
+        "value": 1.5,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         8.333333015441895,
+         1.5
+        ],
+        "handle_right": [
+         15.666666984558105,
+         1.5
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       }
+      ]
+     },
+     {
+      "source": "object",
+      "data_path": "scale",
+      "array_index": 1,
+      "extrapolation": "CONSTANT",
+      "has_modifiers": false,
+      "keyframes": [
+       {
+        "frame": 1.0,
+        "value": 1.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         -2.6666667461395264,
+         1.0
+        ],
+        "handle_right": [
+         4.6666669845581055,
+         1.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       },
+       {
+        "frame": 12.0,
+        "value": 0.800000011920929,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         8.333333015441895,
+         0.800000011920929
+        ],
+        "handle_right": [
+         15.666666984558105,
+         0.800000011920929
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       }
+      ]
+     },
+     {
+      "source": "object",
+      "data_path": "scale",
+      "array_index": 2,
+      "extrapolation": "CONSTANT",
+      "has_modifiers": false,
+      "keyframes": [
+       {
+        "frame": 1.0,
+        "value": 1.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         -2.6666667461395264,
+         1.0
+        ],
+        "handle_right": [
+         4.6666669845581055,
+         1.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       },
+       {
+        "frame": 12.0,
+        "value": 1.2000000476837158,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         8.333333015441895,
+         1.2000000476837158
+        ],
+        "handle_right": [
+         15.666666984558105,
+         1.2000000476837158
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       }
+      ]
+     }
+    ],
+    "baked": null,
+    "needs_bake": false
+   },
+   {
+    "name": "Cube_YZX",
+    "id": "Cube_YZX",
+    "type": "MESH",
+    "rotation_mode": "YZX",
+    "base": {
+     "location": [
+      9.0,
+      0.0,
+      0.0
+     ],
+     "scale": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "rotation_euler": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation_quaternion": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation_axis_angle": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+     ],
+     "delta_location": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "delta_scale": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "delta_rotation_euler": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "delta_rotation_quaternion": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "matrix_local": [
+      1.0,
+      0.0,
+      0.0,
+      9.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ],
+     "matrix_world": [
+      1.0,
+      0.0,
+      0.0,
+      9.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ]
+    },
+    "parent": null,
+    "parent_inverse": [
+     1.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    "parent_type": "OBJECT",
+    "constraints": [],
+    "fcurves": [
+     {
+      "source": "object",
+      "data_path": "location",
+      "array_index": 0,
+      "extrapolation": "CONSTANT",
+      "has_modifiers": false,
+      "keyframes": [
+       {
+        "frame": 1.0,
+        "value": 9.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         -2.6666667461395264,
+         9.0
+        ],
+        "handle_right": [
+         4.6666669845581055,
+         9.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       },
+       {
+        "frame": 12.0,
+        "value": 10.5,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         8.333333015441895,
+         10.5
+        ],
+        "handle_right": [
+         15.666666984558105,
+         10.5
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       }
+      ]
+     },
+     {
+      "source": "object",
+      "data_path": "location",
+      "array_index": 1,
+      "extrapolation": "CONSTANT",
+      "has_modifiers": false,
+      "keyframes": [
+       {
+        "frame": 1.0,
+        "value": 0.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         -2.6666667461395264,
+         0.0
+        ],
+        "handle_right": [
+         4.6666669845581055,
+         0.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       },
+       {
+        "frame": 12.0,
+        "value": 2.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         8.333333015441895,
+         2.0
+        ],
+        "handle_right": [
+         15.666666984558105,
+         2.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       }
+      ]
+     },
+     {
+      "source": "object",
+      "data_path": "location",
+      "array_index": 2,
+      "extrapolation": "CONSTANT",
+      "has_modifiers": false,
+      "keyframes": [
+       {
+        "frame": 1.0,
+        "value": 0.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         -2.6666667461395264,
+         0.0
+        ],
+        "handle_right": [
+         4.6666669845581055,
+         0.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       },
+       {
+        "frame": 12.0,
+        "value": -1.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         8.333333015441895,
+         -1.0
+        ],
+        "handle_right": [
+         15.666666984558105,
+         -1.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       }
+      ]
+     },
+     {
+      "source": "object",
+      "data_path": "rotation_euler",
+      "array_index": 0,
+      "extrapolation": "CONSTANT",
+      "has_modifiers": false,
+      "keyframes": [
+       {
+        "frame": 1.0,
+        "value": 0.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         -2.6666667461395264,
+         0.0
+        ],
+        "handle_right": [
+         4.6666669845581055,
+         0.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       },
+       {
+        "frame": 12.0,
+        "value": 0.6108652353286743,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         8.333333015441895,
+         0.6108652353286743
+        ],
+        "handle_right": [
+         15.666666984558105,
+         0.6108652353286743
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       }
+      ]
+     },
+     {
+      "source": "object",
+      "data_path": "rotation_euler",
+      "array_index": 1,
+      "extrapolation": "CONSTANT",
+      "has_modifiers": false,
+      "keyframes": [
+       {
+        "frame": 1.0,
+        "value": 0.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         -2.6666667461395264,
+         0.0
+        ],
+        "handle_right": [
+         4.6666669845581055,
+         0.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       },
+       {
+        "frame": 12.0,
+        "value": 0.8726646304130554,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         8.333333015441895,
+         0.8726646304130554
+        ],
+        "handle_right": [
+         15.666666984558105,
+         0.8726646304130554
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       }
+      ]
+     },
+     {
+      "source": "object",
+      "data_path": "rotation_euler",
+      "array_index": 2,
+      "extrapolation": "CONSTANT",
+      "has_modifiers": false,
+      "keyframes": [
+       {
+        "frame": 1.0,
+        "value": 0.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         -2.6666667461395264,
+         0.0
+        ],
+        "handle_right": [
+         4.6666669845581055,
+         0.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       },
+       {
+        "frame": 12.0,
+        "value": 0.3490658402442932,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         8.333333015441895,
+         0.3490658402442932
+        ],
+        "handle_right": [
+         15.666666984558105,
+         0.3490658402442932
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       }
+      ]
+     },
+     {
+      "source": "object",
+      "data_path": "scale",
+      "array_index": 0,
+      "extrapolation": "CONSTANT",
+      "has_modifiers": false,
+      "keyframes": [
+       {
+        "frame": 1.0,
+        "value": 1.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         -2.6666667461395264,
+         1.0
+        ],
+        "handle_right": [
+         4.6666669845581055,
+         1.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       },
+       {
+        "frame": 12.0,
+        "value": 1.5,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         8.333333015441895,
+         1.5
+        ],
+        "handle_right": [
+         15.666666984558105,
+         1.5
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       }
+      ]
+     },
+     {
+      "source": "object",
+      "data_path": "scale",
+      "array_index": 1,
+      "extrapolation": "CONSTANT",
+      "has_modifiers": false,
+      "keyframes": [
+       {
+        "frame": 1.0,
+        "value": 1.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         -2.6666667461395264,
+         1.0
+        ],
+        "handle_right": [
+         4.6666669845581055,
+         1.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       },
+       {
+        "frame": 12.0,
+        "value": 0.800000011920929,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         8.333333015441895,
+         0.800000011920929
+        ],
+        "handle_right": [
+         15.666666984558105,
+         0.800000011920929
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       }
+      ]
+     },
+     {
+      "source": "object",
+      "data_path": "scale",
+      "array_index": 2,
+      "extrapolation": "CONSTANT",
+      "has_modifiers": false,
+      "keyframes": [
+       {
+        "frame": 1.0,
+        "value": 1.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         -2.6666667461395264,
+         1.0
+        ],
+        "handle_right": [
+         4.6666669845581055,
+         1.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       },
+       {
+        "frame": 12.0,
+        "value": 1.2000000476837158,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         8.333333015441895,
+         1.2000000476837158
+        ],
+        "handle_right": [
+         15.666666984558105,
+         1.2000000476837158
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       }
+      ]
+     }
+    ],
+    "baked": null,
+    "needs_bake": false
+   },
+   {
+    "name": "Cube_ZXY",
+    "id": "Cube_ZXY",
+    "type": "MESH",
+    "rotation_mode": "ZXY",
+    "base": {
+     "location": [
+      12.0,
+      0.0,
+      0.0
+     ],
+     "scale": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "rotation_euler": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation_quaternion": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation_axis_angle": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+     ],
+     "delta_location": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "delta_scale": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "delta_rotation_euler": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "delta_rotation_quaternion": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "matrix_local": [
+      1.0,
+      0.0,
+      0.0,
+      12.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ],
+     "matrix_world": [
+      1.0,
+      0.0,
+      0.0,
+      12.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ]
+    },
+    "parent": null,
+    "parent_inverse": [
+     1.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    "parent_type": "OBJECT",
+    "constraints": [],
+    "fcurves": [
+     {
+      "source": "object",
+      "data_path": "location",
+      "array_index": 0,
+      "extrapolation": "CONSTANT",
+      "has_modifiers": false,
+      "keyframes": [
+       {
+        "frame": 1.0,
+        "value": 12.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         -2.6666667461395264,
+         12.0
+        ],
+        "handle_right": [
+         4.6666669845581055,
+         12.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       },
+       {
+        "frame": 12.0,
+        "value": 13.5,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         8.333333015441895,
+         13.5
+        ],
+        "handle_right": [
+         15.666666984558105,
+         13.5
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       }
+      ]
+     },
+     {
+      "source": "object",
+      "data_path": "location",
+      "array_index": 1,
+      "extrapolation": "CONSTANT",
+      "has_modifiers": false,
+      "keyframes": [
+       {
+        "frame": 1.0,
+        "value": 0.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         -2.6666667461395264,
+         0.0
+        ],
+        "handle_right": [
+         4.6666669845581055,
+         0.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       },
+       {
+        "frame": 12.0,
+        "value": 2.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         8.333333015441895,
+         2.0
+        ],
+        "handle_right": [
+         15.666666984558105,
+         2.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       }
+      ]
+     },
+     {
+      "source": "object",
+      "data_path": "location",
+      "array_index": 2,
+      "extrapolation": "CONSTANT",
+      "has_modifiers": false,
+      "keyframes": [
+       {
+        "frame": 1.0,
+        "value": 0.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         -2.6666667461395264,
+         0.0
+        ],
+        "handle_right": [
+         4.6666669845581055,
+         0.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       },
+       {
+        "frame": 12.0,
+        "value": -1.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         8.333333015441895,
+         -1.0
+        ],
+        "handle_right": [
+         15.666666984558105,
+         -1.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       }
+      ]
+     },
+     {
+      "source": "object",
+      "data_path": "rotation_euler",
+      "array_index": 0,
+      "extrapolation": "CONSTANT",
+      "has_modifiers": false,
+      "keyframes": [
+       {
+        "frame": 1.0,
+        "value": 0.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         -2.6666667461395264,
+         0.0
+        ],
+        "handle_right": [
+         4.6666669845581055,
+         0.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       },
+       {
+        "frame": 12.0,
+        "value": 0.6108652353286743,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         8.333333015441895,
+         0.6108652353286743
+        ],
+        "handle_right": [
+         15.666666984558105,
+         0.6108652353286743
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       }
+      ]
+     },
+     {
+      "source": "object",
+      "data_path": "rotation_euler",
+      "array_index": 1,
+      "extrapolation": "CONSTANT",
+      "has_modifiers": false,
+      "keyframes": [
+       {
+        "frame": 1.0,
+        "value": 0.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         -2.6666667461395264,
+         0.0
+        ],
+        "handle_right": [
+         4.6666669845581055,
+         0.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       },
+       {
+        "frame": 12.0,
+        "value": 0.8726646304130554,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         8.333333015441895,
+         0.8726646304130554
+        ],
+        "handle_right": [
+         15.666666984558105,
+         0.8726646304130554
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       }
+      ]
+     },
+     {
+      "source": "object",
+      "data_path": "rotation_euler",
+      "array_index": 2,
+      "extrapolation": "CONSTANT",
+      "has_modifiers": false,
+      "keyframes": [
+       {
+        "frame": 1.0,
+        "value": 0.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         -2.6666667461395264,
+         0.0
+        ],
+        "handle_right": [
+         4.6666669845581055,
+         0.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       },
+       {
+        "frame": 12.0,
+        "value": 0.3490658402442932,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         8.333333015441895,
+         0.3490658402442932
+        ],
+        "handle_right": [
+         15.666666984558105,
+         0.3490658402442932
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       }
+      ]
+     },
+     {
+      "source": "object",
+      "data_path": "scale",
+      "array_index": 0,
+      "extrapolation": "CONSTANT",
+      "has_modifiers": false,
+      "keyframes": [
+       {
+        "frame": 1.0,
+        "value": 1.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         -2.6666667461395264,
+         1.0
+        ],
+        "handle_right": [
+         4.6666669845581055,
+         1.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       },
+       {
+        "frame": 12.0,
+        "value": 1.5,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         8.333333015441895,
+         1.5
+        ],
+        "handle_right": [
+         15.666666984558105,
+         1.5
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       }
+      ]
+     },
+     {
+      "source": "object",
+      "data_path": "scale",
+      "array_index": 1,
+      "extrapolation": "CONSTANT",
+      "has_modifiers": false,
+      "keyframes": [
+       {
+        "frame": 1.0,
+        "value": 1.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         -2.6666667461395264,
+         1.0
+        ],
+        "handle_right": [
+         4.6666669845581055,
+         1.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       },
+       {
+        "frame": 12.0,
+        "value": 0.800000011920929,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         8.333333015441895,
+         0.800000011920929
+        ],
+        "handle_right": [
+         15.666666984558105,
+         0.800000011920929
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       }
+      ]
+     },
+     {
+      "source": "object",
+      "data_path": "scale",
+      "array_index": 2,
+      "extrapolation": "CONSTANT",
+      "has_modifiers": false,
+      "keyframes": [
+       {
+        "frame": 1.0,
+        "value": 1.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         -2.6666667461395264,
+         1.0
+        ],
+        "handle_right": [
+         4.6666669845581055,
+         1.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       },
+       {
+        "frame": 12.0,
+        "value": 1.2000000476837158,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         8.333333015441895,
+         1.2000000476837158
+        ],
+        "handle_right": [
+         15.666666984558105,
+         1.2000000476837158
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       }
+      ]
+     }
+    ],
+    "baked": null,
+    "needs_bake": false
+   },
+   {
+    "name": "Cube_ZYX",
+    "id": "Cube_ZYX",
+    "type": "MESH",
+    "rotation_mode": "ZYX",
+    "base": {
+     "location": [
+      15.0,
+      0.0,
+      0.0
+     ],
+     "scale": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "rotation_euler": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation_quaternion": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation_axis_angle": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+     ],
+     "delta_location": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "delta_scale": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "delta_rotation_euler": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "delta_rotation_quaternion": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "matrix_local": [
+      1.0,
+      0.0,
+      0.0,
+      15.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ],
+     "matrix_world": [
+      1.0,
+      0.0,
+      0.0,
+      15.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ]
+    },
+    "parent": null,
+    "parent_inverse": [
+     1.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    "parent_type": "OBJECT",
+    "constraints": [],
+    "fcurves": [
+     {
+      "source": "object",
+      "data_path": "location",
+      "array_index": 0,
+      "extrapolation": "CONSTANT",
+      "has_modifiers": false,
+      "keyframes": [
+       {
+        "frame": 1.0,
+        "value": 15.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         -2.6666667461395264,
+         15.0
+        ],
+        "handle_right": [
+         4.6666669845581055,
+         15.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       },
+       {
+        "frame": 12.0,
+        "value": 16.5,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         8.333333015441895,
+         16.5
+        ],
+        "handle_right": [
+         15.666666984558105,
+         16.5
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       }
+      ]
+     },
+     {
+      "source": "object",
+      "data_path": "location",
+      "array_index": 1,
+      "extrapolation": "CONSTANT",
+      "has_modifiers": false,
+      "keyframes": [
+       {
+        "frame": 1.0,
+        "value": 0.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         -2.6666667461395264,
+         0.0
+        ],
+        "handle_right": [
+         4.6666669845581055,
+         0.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       },
+       {
+        "frame": 12.0,
+        "value": 2.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         8.333333015441895,
+         2.0
+        ],
+        "handle_right": [
+         15.666666984558105,
+         2.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       }
+      ]
+     },
+     {
+      "source": "object",
+      "data_path": "location",
+      "array_index": 2,
+      "extrapolation": "CONSTANT",
+      "has_modifiers": false,
+      "keyframes": [
+       {
+        "frame": 1.0,
+        "value": 0.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         -2.6666667461395264,
+         0.0
+        ],
+        "handle_right": [
+         4.6666669845581055,
+         0.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       },
+       {
+        "frame": 12.0,
+        "value": -1.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         8.333333015441895,
+         -1.0
+        ],
+        "handle_right": [
+         15.666666984558105,
+         -1.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       }
+      ]
+     },
+     {
+      "source": "object",
+      "data_path": "rotation_euler",
+      "array_index": 0,
+      "extrapolation": "CONSTANT",
+      "has_modifiers": false,
+      "keyframes": [
+       {
+        "frame": 1.0,
+        "value": 0.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         -2.6666667461395264,
+         0.0
+        ],
+        "handle_right": [
+         4.6666669845581055,
+         0.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       },
+       {
+        "frame": 12.0,
+        "value": 0.6108652353286743,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         8.333333015441895,
+         0.6108652353286743
+        ],
+        "handle_right": [
+         15.666666984558105,
+         0.6108652353286743
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       }
+      ]
+     },
+     {
+      "source": "object",
+      "data_path": "rotation_euler",
+      "array_index": 1,
+      "extrapolation": "CONSTANT",
+      "has_modifiers": false,
+      "keyframes": [
+       {
+        "frame": 1.0,
+        "value": 0.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         -2.6666667461395264,
+         0.0
+        ],
+        "handle_right": [
+         4.6666669845581055,
+         0.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       },
+       {
+        "frame": 12.0,
+        "value": 0.8726646304130554,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         8.333333015441895,
+         0.8726646304130554
+        ],
+        "handle_right": [
+         15.666666984558105,
+         0.8726646304130554
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       }
+      ]
+     },
+     {
+      "source": "object",
+      "data_path": "rotation_euler",
+      "array_index": 2,
+      "extrapolation": "CONSTANT",
+      "has_modifiers": false,
+      "keyframes": [
+       {
+        "frame": 1.0,
+        "value": 0.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         -2.6666667461395264,
+         0.0
+        ],
+        "handle_right": [
+         4.6666669845581055,
+         0.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       },
+       {
+        "frame": 12.0,
+        "value": 0.3490658402442932,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         8.333333015441895,
+         0.3490658402442932
+        ],
+        "handle_right": [
+         15.666666984558105,
+         0.3490658402442932
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       }
+      ]
+     },
+     {
+      "source": "object",
+      "data_path": "scale",
+      "array_index": 0,
+      "extrapolation": "CONSTANT",
+      "has_modifiers": false,
+      "keyframes": [
+       {
+        "frame": 1.0,
+        "value": 1.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         -2.6666667461395264,
+         1.0
+        ],
+        "handle_right": [
+         4.6666669845581055,
+         1.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       },
+       {
+        "frame": 12.0,
+        "value": 1.5,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         8.333333015441895,
+         1.5
+        ],
+        "handle_right": [
+         15.666666984558105,
+         1.5
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       }
+      ]
+     },
+     {
+      "source": "object",
+      "data_path": "scale",
+      "array_index": 1,
+      "extrapolation": "CONSTANT",
+      "has_modifiers": false,
+      "keyframes": [
+       {
+        "frame": 1.0,
+        "value": 1.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         -2.6666667461395264,
+         1.0
+        ],
+        "handle_right": [
+         4.6666669845581055,
+         1.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       },
+       {
+        "frame": 12.0,
+        "value": 0.800000011920929,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         8.333333015441895,
+         0.800000011920929
+        ],
+        "handle_right": [
+         15.666666984558105,
+         0.800000011920929
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       }
+      ]
+     },
+     {
+      "source": "object",
+      "data_path": "scale",
+      "array_index": 2,
+      "extrapolation": "CONSTANT",
+      "has_modifiers": false,
+      "keyframes": [
+       {
+        "frame": 1.0,
+        "value": 1.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         -2.6666667461395264,
+         1.0
+        ],
+        "handle_right": [
+         4.6666669845581055,
+         1.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       },
+       {
+        "frame": 12.0,
+        "value": 1.2000000476837158,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         8.333333015441895,
+         1.2000000476837158
+        ],
+        "handle_right": [
+         15.666666984558105,
+         1.2000000476837158
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       }
+      ]
+     }
+    ],
+    "baked": null,
+    "needs_bake": false
+   }
+  ]
+ },
+ "golden": [
+  {
+   "frame": 1,
+   "object": "Cube_XYZ",
+   "matrix_world": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 1,
+   "object": "Cube_XZY",
+   "matrix_world": [
+    1.0,
+    0.0,
+    0.0,
+    3.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 1,
+   "object": "Cube_YXZ",
+   "matrix_world": [
+    1.0,
+    0.0,
+    0.0,
+    6.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 1,
+   "object": "Cube_YZX",
+   "matrix_world": [
+    1.0,
+    0.0,
+    0.0,
+    9.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 1,
+   "object": "Cube_ZXY",
+   "matrix_world": [
+    1.0,
+    0.0,
+    0.0,
+    12.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 1,
+   "object": "Cube_ZYX",
+   "matrix_world": [
+    1.0,
+    0.0,
+    0.0,
+    15.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 2,
+   "object": "Cube_XYZ",
+   "matrix_world": [
+    1.0114030838012695,
+    -0.007803441025316715,
+    0.020531751215457916,
+    0.03493613377213478,
+    0.008222896605730057,
+    0.9952105283737183,
+    -0.014126848429441452,
+    0.046581510454416275,
+    -0.02056029625236988,
+    0.014157835394144058,
+    1.004348874092102,
+    -0.023290755227208138,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 2,
+   "object": "Cube_XZY",
+   "matrix_world": [
+    1.0114030838012695,
+    -0.007801760453730822,
+    0.020532401278614998,
+    3.03493595123291,
+    0.008224595338106155,
+    0.995208203792572,
+    -0.014292831532657146,
+    0.046581510454416275,
+    -0.02055961638689041,
+    0.014322279021143913,
+    1.0043466091156006,
+    -0.023290755227208138,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 2,
+   "object": "Cube_YXZ",
+   "matrix_world": [
+    1.0114006996154785,
+    -0.008091229014098644,
+    0.020533792674541473,
+    6.03493595123291,
+    0.008515398018062115,
+    0.995208203792572,
+    -0.014123879373073578,
+    0.046581510454416275,
+    -0.02055821381509304,
+    0.014160760678350925,
+    1.004348874092102,
+    -0.023290755227208138,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 2,
+   "object": "Cube_YZX",
+   "matrix_world": [
+    1.0114030838012695,
+    -0.008092048577964306,
+    0.02041761390864849,
+    9.034936904907227,
+    0.00851457566022873,
+    0.995208203792572,
+    -0.014124369248747826,
+    0.046581510454416275,
+    -0.020441226661205292,
+    0.014160293154418468,
+    1.0043513774871826,
+    -0.023290755227208138,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 2,
+   "object": "Cube_ZXY",
+   "matrix_world": [
+    1.0114054679870605,
+    -0.007802588399499655,
+    0.020416220650076866,
+    12.034936904907227,
+    0.00822376273572445,
+    0.995208203792572,
+    -0.014293303713202477,
+    0.046581510454416275,
+    -0.020442629233002663,
+    0.014321827329695225,
+    1.004348874092102,
+    -0.023290755227208138,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 2,
+   "object": "Cube_ZYX",
+   "matrix_world": [
+    1.0114030838012695,
+    -0.008090376853942871,
+    0.020418288186192513,
+    15.034936904907227,
+    0.008516265079379082,
+    0.9952058792114258,
+    -0.01429035048931837,
+    0.046581510454416275,
+    -0.02044052444398403,
+    0.014324734918773174,
+    1.004348874092102,
+    -0.023290755227208138,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 3,
+   "object": "Cube_XYZ",
+   "matrix_world": [
+    1.040078043937683,
+    -0.02587382309138775,
+    0.07880757749080658,
+    0.13072875142097473,
+    0.031650982797145844,
+    0.9808441996574402,
+    -0.05176766589283943,
+    0.1743050068616867,
+    -0.07929260283708572,
+    0.05213460698723793,
+    1.013051986694336,
+    -0.08715250343084335,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 3,
+   "object": "Cube_XZY",
+   "matrix_world": [
+    1.040078043937683,
+    -0.02578571066260338,
+    0.0788385346531868,
+    3.1307287216186523,
+    0.03174274414777756,
+    0.9807233810424805,
+    -0.054115768522024155,
+    0.1743050068616867,
+    -0.07925590872764587,
+    0.05440225824713707,
+    1.0129269361495972,
+    -0.08715250343084335,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 3,
+   "object": "Cube_YXZ",
+   "matrix_world": [
+    1.039949655532837,
+    -0.02984474040567875,
+    0.07891229540109634,
+    6.130728721618652,
+    0.03586844727396965,
+    0.9807233810424805,
+    -0.051607895642519,
+    0.1743050068616867,
+    -0.07918025553226471,
+    0.052285753190517426,
+    1.013051986694336,
+    -0.08715250343084335,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 3,
+   "object": "Cube_YZX",
+   "matrix_world": [
+    1.040078043937683,
+    -0.029887085780501366,
+    0.07727023959159851,
+    9.130728721618652,
+    0.03582555428147316,
+    0.9807233810424805,
+    -0.05163620784878731,
+    0.1743050068616867,
+    -0.0774960070848465,
+    0.052261557430028915,
+    1.0131771564483643,
+    -0.08715250343084335,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 3,
+   "object": "Cube_ZXY",
+   "matrix_world": [
+    1.0402063131332397,
+    -0.025829769670963287,
+    0.07719647884368896,
+    12.130728721618652,
+    0.03169776871800423,
+    0.9807233810424805,
+    -0.05414082482457161,
+    0.1743050068616867,
+    -0.07757166028022766,
+    0.0543813519179821,
+    1.013051986694336,
+    -0.08715250343084335,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 3,
+   "object": "Cube_ZYX",
+   "matrix_world": [
+    1.040078043937683,
+    -0.029800686985254288,
+    0.07730600982904434,
+    15.130728721618652,
+    0.03591523692011833,
+    0.980602502822876,
+    -0.05398431420326233,
+    0.1743050068616867,
+    -0.07745448499917984,
+    0.05452921241521835,
+    1.013051986694336,
+    -0.08715250343084335,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 4,
+   "object": "Cube_XYZ",
+   "matrix_world": [
+    1.075276494026184,
+    -0.04400157555937767,
+    0.17043495178222656,
+    0.27385419607162476,
+    0.06861896067857742,
+    0.9566401839256287,
+    -0.10471639782190323,
+    0.3651389181613922,
+    -0.17313095927238464,
+    0.10587244480848312,
+    1.0170286893844604,
+    -0.1825694590806961,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 4,
+   "object": "Cube_XZY",
+   "matrix_world": [
+    1.075276494026184,
+    -0.04319474846124649,
+    0.1706736534833908,
+    3.2738540172576904,
+    0.06949915736913681,
+    0.9555567502975464,
+    -0.11512391269207001,
+    0.3651389181613922,
+    -0.17277951538562775,
+    0.11554668843746185,
+    1.015863299369812,
+    -0.1825694590806961,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 4,
+   "object": "Cube_YXZ",
+   "matrix_world": [
+    1.0740493535995483,
+    -0.060979023575782776,
+    0.17136143147945404,
+    6.2738542556762695,
+    0.08784833550453186,
+    0.9555567502975464,
+    -0.10319330543279648,
+    0.3651389181613922,
+    -0.17205537855625153,
+    0.10723050683736801,
+    1.0170286893844604,
+    -0.1825694590806961,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 4,
+   "object": "Cube_YZX",
+   "matrix_world": [
+    1.075276494026184,
+    -0.06136022508144379,
+    0.16410782933235168,
+    9.27385425567627,
+    0.08746115863323212,
+    0.9555567502975464,
+    -0.10348957031965256,
+    0.3651389181613922,
+    -0.16441848874092102,
+    0.10701283067464828,
+    1.018194317817688,
+    -0.1825694590806961,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 4,
+   "object": "Cube_ZXY",
+   "matrix_world": [
+    1.0765036344528198,
+    -0.04360565170645714,
+    0.16342003643512726,
+    12.27385425567627,
+    0.06906739622354507,
+    0.9555567502975464,
+    -0.11535808444023132,
+    0.3651389181613922,
+    -0.16514259576797485,
+    0.11539224535226822,
+    1.0170286893844604,
+    -0.1825694590806961,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 4,
+   "object": "Cube_ZYX",
+   "matrix_world": [
+    1.075276494026184,
+    -0.06058310717344284,
+    0.16444163024425507,
+    15.27385425567627,
+    0.08829677104949951,
+    0.9544733166694641,
+    -0.11389708518981934,
+    0.3651389181613922,
+    -0.16397126019001007,
+    0.11668708175420761,
+    1.0170286893844604,
+    -0.1825694590806961,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 5,
+   "object": "Cube_XYZ",
+   "matrix_world": [
+    1.1048247814178467,
+    -0.052524134516716,
+    0.2890053987503052,
+    0.45078879594802856,
+    0.11632683128118515,
+    0.923678994178772,
+    -0.16416405141353607,
+    0.6010517477989197,
+    -0.29821979999542236,
+    0.16571228206157684,
+    1.0066522359848022,
+    -0.30052587389945984,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 5,
+   "object": "Cube_XZY",
+   "matrix_world": [
+    1.1048247814178467,
+    -0.04897095263004303,
+    0.2897980213165283,
+    3.450788974761963,
+    0.12044522166252136,
+    0.9190210103988647,
+    -0.19245977699756622,
+    0.6010517477989197,
+    -0.29658037424087524,
+    0.19079941511154175,
+    1.0013985633850098,
+    -0.30052587389945984,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 5,
+   "object": "Cube_YXZ",
+   "matrix_world": [
+    1.0991243124008179,
+    -0.09676358103752136,
+    0.2929055392742157,
+    6.450788974761963,
+    0.17046800255775452,
+    0.9190210103988647,
+    -0.1570996642112732,
+    0.6010517477989197,
+    -0.29320862889289856,
+    0.17157909274101257,
+    1.0066522359848022,
+    -0.30052587389945984,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 5,
+   "object": "Cube_YZX",
+   "matrix_world": [
+    1.1048247814178467,
+    -0.09841735661029816,
+    0.2733343541622162,
+    9.450788497924805,
+    0.168812558054924,
+    0.9190210103988647,
+    -0.1586107611656189,
+    0.6010517477989197,
+    -0.27197298407554626,
+    0.1706358641386032,
+    1.0119060277938843,
+    -0.30052587389945984,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 5,
+   "object": "Cube_ZXY",
+   "matrix_world": [
+    1.110525369644165,
+    -0.050812721252441406,
+    0.2702268660068512,
+    12.450788497924805,
+    0.11842130124568939,
+    0.9190210103988647,
+    -0.19352364540100098,
+    0.6010517477989197,
+    -0.27534475922584534,
+    0.19031721353530884,
+    1.0066522359848022,
+    -0.30052587389945984,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 5,
+   "object": "Cube_ZYX",
+   "matrix_world": [
+    1.1048247814178467,
+    -0.09505216777324677,
+    0.27484527230262756,
+    15.450788497924805,
+    0.17256245017051697,
+    0.9143630862236023,
+    -0.18690648674964905,
+    0.6010517477989197,
+    -0.2696093022823334,
+    0.1957230269908905,
+    1.0066522359848022,
+    -0.30052587389945984,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 6,
+   "object": "Cube_XYZ",
+   "matrix_world": [
+    1.1177778244018555,
+    -0.045763880014419556,
+    0.4242810010910034,
+    0.6480089426040649,
+    0.16984868049621582,
+    0.8851406574249268,
+    -0.22216489911079407,
+    0.8640119433403015,
+    -0.44764643907546997,
+    0.22157244384288788,
+    0.9751389622688293,
+    -0.43200597167015076,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 6,
+   "object": "Cube_XZY",
+   "matrix_world": [
+    1.1177778244018555,
+    -0.03546367585659027,
+    0.4256729781627655,
+    3.6480088233947754,
+    0.1826772689819336,
+    0.8719614744186401,
+    -0.2801663875579834,
+    0.8640119433403015,
+    -0.44256627559661865,
+    0.27034828066825867,
+    0.9594669938087463,
+    -0.43200597167015076,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 6,
+   "object": "Cube_YXZ",
+   "matrix_world": [
+    1.1002362966537476,
+    -0.13249635696411133,
+    0.43497979640960693,
+    6.648008823394775,
+    0.2852899134159088,
+    0.8719614744186401,
+    -0.20041009783744812,
+    0.8640119433403015,
+    -0.432149201631546,
+    0.23830769956111908,
+    0.9751389622688293,
+    -0.43200597167015076,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 6,
+   "object": "Cube_YZX",
+   "matrix_world": [
+    1.1177778244018555,
+    -0.13724780082702637,
+    0.39539751410484314,
+    9.648009300231934,
+    0.28073498606681824,
+    0.8719614744186401,
+    -0.20548021793365479,
+    0.8640119433403015,
+    -0.3878450393676758,
+    0.23560325801372528,
+    0.9908109307289124,
+    -0.43200597167015076,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 6,
+   "object": "Cube_ZXY",
+   "matrix_world": [
+    1.1353193521499634,
+    -0.04087701812386513,
+    0.3860906958580017,
+    12.648009300231934,
+    0.1763530969619751,
+    0.8719614744186401,
+    -0.2833823561668396,
+    0.8640119433403015,
+    -0.3982621133327484,
+    0.2695828676223755,
+    0.9751389622688293,
+    -0.43200597167015076,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 6,
+   "object": "Cube_ZYX",
+   "matrix_world": [
+    1.1177778244018555,
+    -0.127609521150589,
+    0.3999362289905548,
+    15.648009300231934,
+    0.2917943298816681,
+    0.8587822914123535,
+    -0.2634817063808441,
+    0.8640119433403015,
+    -0.37959450483322144,
+    0.2843790650367737,
+    0.9751389622688293,
+    -0.43200597167015076,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 7,
+   "object": "Cube_XYZ",
+   "matrix_world": [
+    1.10734224319458,
+    -0.023638591170310974,
+    0.5629171133041382,
+    0.8519909977912903,
+    0.22247256338596344,
+    0.8454864025115967,
+    -0.2731497883796692,
+    1.1359879970550537,
+    -0.6106941103935242,
+    0.26514339447021484,
+    0.9212034344673157,
+    -0.5679939985275269,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 7,
+   "object": "Cube_XZY",
+   "matrix_world": [
+    1.10734224319458,
+    -0.0010698757832869887,
+    0.5636983513832092,
+    3.8519909381866455,
+    0.2529100179672241,
+    0.817248523235321,
+    -0.37125834822654724,
+    1.1359879970550537,
+    -0.598730206489563,
+    0.3432357609272003,
+    0.8857277631759644,
+    -0.5679939985275269,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 7,
+   "object": "Cube_YXZ",
+   "matrix_world": [
+    1.0664381980895996,
+    -0.16419076919555664,
+    0.5848849415779114,
+    6.851990699768066,
+    0.4260694980621338,
+    0.817248523235321,
+    -0.2222522795200348,
+    1.1359879970550537,
+    -0.5743017196655273,
+    0.30141884088516235,
+    0.9212034344673157,
+    -0.5679939985275269,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 7,
+   "object": "Cube_YZX",
+   "matrix_world": [
+    1.10734224319458,
+    -0.17459522187709808,
+    0.5192732810974121,
+    9.851991653442383,
+    0.4168802499771118,
+    0.817248523235321,
+    -0.23499496281147003,
+    1.1359879970550537,
+    -0.4986504018306732,
+    0.2955138385295868,
+    0.956679105758667,
+    -0.5679939985275269,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 7,
+   "object": "Cube_ZXY",
+   "matrix_world": [
+    1.148246169090271,
+    -0.013030696660280228,
+    0.4980866611003876,
+    12.851991653442383,
+    0.23783864080905914,
+    0.817248523235321,
+    -0.3786768913269043,
+    1.1359879970550537,
+    -0.5230789184570312,
+    0.3429899513721466,
+    0.9212034344673157,
+    -0.5679939985275269,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 7,
+   "object": "Cube_ZYX",
+   "matrix_world": [
+    1.10734224319458,
+    -0.1535828709602356,
+    0.5296494364738464,
+    15.851990699768066,
+    0.4414355456829071,
+    0.7890106439590454,
+    -0.3331035375595093,
+    1.1359879970550537,
+    -0.4770492613315582,
+    0.3736061751842499,
+    0.9212034344673157,
+    -0.5679939985275269,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 8,
+   "object": "Cube_XYZ",
+   "matrix_world": [
+    1.0731914043426514,
+    0.009013782255351543,
+    0.6912012100219727,
+    1.0492111444473267,
+    0.2673673927783966,
+    0.80894935131073,
+    -0.31461119651794434,
+    1.398948073387146,
+    -0.7736698389053345,
+    0.2920628488063812,
+    0.850071132183075,
+    -0.699474036693573,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 8,
+   "object": "Cube_XZY",
+   "matrix_world": [
+    1.0731914043426514,
+    0.04924576357007027,
+    0.6882167458534241,
+    4.049211502075195,
+    0.3262905180454254,
+    0.7595599293708801,
+    -0.4583629369735718,
+    1.398948073387146,
+    -0.7507228851318359,
+    0.4005303978919983,
+    0.7846154570579529,
+    -0.699474036693573,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 8,
+   "object": "Cube_YXZ",
+   "matrix_world": [
+    0.9956860542297363,
+    -0.18923145532608032,
+    0.7275805473327637,
+    7.049211502075195,
+    0.578467607498169,
+    0.7595599293708801,
+    -0.21763700246810913,
+    1.398948073387146,
+    -0.7041126489639282,
+    0.3564283847808838,
+    0.850071132183075,
+    -0.699474036693573,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 8,
+   "object": "Cube_YZX",
+   "matrix_world": [
+    1.0731914043426514,
+    -0.20792506635189056,
+    0.6340088248252869,
+    10.049211502075195,
+    0.5639390349388123,
+    0.7595599293708801,
+    -0.24331825971603394,
+    1.398948073387146,
+    -0.5933153033256531,
+    0.34585675597190857,
+    0.915526807308197,
+    -0.699474036693573,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 8,
+   "object": "Cube_ZXY",
+   "matrix_world": [
+    1.1506967544555664,
+    0.02786826901137829,
+    0.5946449637413025,
+    13.049211502075195,
+    0.2969551682472229,
+    0.7595599293708801,
+    -0.47237345576286316,
+    1.398948073387146,
+    -0.6399255990982056,
+    0.4025830030441284,
+    0.850071132183075,
+    -0.699474036693573,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 8,
+   "object": "Cube_ZYX",
+   "matrix_world": [
+    1.0731914043426514,
+    -0.1703769564628601,
+    0.6533882021903992,
+    16.049209594726562,
+    0.6080554127693176,
+    0.7101704478263855,
+    -0.3870700001716614,
+    1.398948073387146,
+    -0.5480136871337891,
+    0.45432430505752563,
+    0.850071132183075,
+    -0.699474036693573,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 9,
+   "object": "Cube_XYZ",
+   "matrix_world": [
+    1.0221694707870483,
+    0.04480292275547981,
+    0.7981805801391602,
+    1.2261459827423096,
+    0.299844890832901,
+    0.7784613966941833,
+    -0.3464670479297638,
+    1.6348611116409302,
+    -0.9218142032623291,
+    0.30289605259895325,
+    0.7723785042762756,
+    -0.8174305558204651,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 9,
+   "object": "Cube_XZY",
+   "matrix_world": [
+    1.0221694707870483,
+    0.10580190271139145,
+    0.7869690656661987,
+    4.2261457443237305,
+    0.3965265452861786,
+    0.7046814560890198,
+    -0.5346043109893799,
+    1.6348611116409302,
+    -0.8845422863960266,
+    0.4381614327430725,
+    0.6697598099708557,
+    -0.8174305558204651,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 9,
+   "object": "Cube_YXZ",
+   "matrix_world": [
+    0.8979216814041138,
+    -0.20671245455741882,
+    0.8491464853286743,
+    7.2261457443237305,
+    0.7234045267105103,
+    0.7046814560890198,
+    -0.1899523288011551,
+    1.6348611116409302,
+    -0.8092595934867859,
+    0.40056145191192627,
+    0.7723785042762756,
+    -0.8174305558204651,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 9,
+   "object": "Cube_YZX",
+   "matrix_world": [
+    1.0221694707870483,
+    -0.2354627400636673,
+    0.7305612564086914,
+    10.22614574432373,
+    0.7046406865119934,
+    0.7046814560890198,
+    -0.23315322399139404,
+    1.6348611116409302,
+    -0.6656800508499146,
+    0.3843654692173004,
+    0.8749971985816956,
+    -0.8174305558204651,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 9,
+   "object": "Cube_ZXY",
+   "matrix_world": [
+    1.1464171409606934,
+    0.07346347719430923,
+    0.668383777141571,
+    13.22614574432373,
+    0.348110169172287,
+    0.7046814560890198,
+    -0.5571309328079224,
+    1.6348611116409302,
+    -0.7409627437591553,
+    0.4447275698184967,
+    0.7723785042762756,
+    -0.8174305558204651,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 9,
+   "object": "Cube_ZYX",
+   "matrix_world": [
+    1.0221694707870483,
+    -0.1780518889427185,
+    0.7613449096679688,
+    16.226144790649414,
+    0.771669864654541,
+    0.6309015154838562,
+    -0.4212905466556549,
+    1.6348611116409302,
+    -0.5866634249687195,
+    0.5196309089660645,
+    0.7723785042762756,
+    -0.8174305558204651,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 10,
+   "object": "Cube_XYZ",
+   "matrix_world": [
+    0.9669795632362366,
+    0.07641895115375519,
+    0.8773698210716248,
+    1.3692712783813477,
+    0.31899207830429077,
+    0.755575954914093,
+    -0.3695250451564789,
+    1.8256950378417969,
+    -1.0413283109664917,
+    0.3024197816848755,
+    0.7015300989151001,
+    -0.9128475189208984,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 10,
+   "object": "Cube_XZY",
+   "matrix_world": [
+    0.9669795632362366,
+    0.15736281871795654,
+    0.8545016646385193,
+    4.369271278381348,
+    0.4562669098377228,
+    0.6586856245994568,
+    -0.5942838191986084,
+    1.8256950378417969,
+    -0.9889090657234192,
+    0.4577803313732147,
+    0.5613596439361572,
+    -0.9128475189208984,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 10,
+   "object": "Cube_YXZ",
+   "matrix_world": [
+    0.794349193572998,
+    -0.2172904908657074,
+    0.9400246739387512,
+    7.369271278381348,
+    0.8422970175743103,
+    0.6586856245994568,
+    -0.1505991369485855,
+    1.8256950378417969,
+    -0.8835809826850891,
+    0.4325629472732544,
+    0.7015300989151001,
+    -0.9128475189208984,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 10,
+   "object": "Cube_YZX",
+   "matrix_world": [
+    0.9669795632362366,
+    -0.25608375668525696,
+    0.802962601184845,
+    10.369271278381348,
+    0.821712851524353,
+    0.6586856245994568,
+    -0.21274937689304352,
+    1.8256950378417969,
+    -0.7147786617279053,
+    0.41078823804855347,
+    0.8417004346847534,
+    -0.9128475189208984,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 10,
+   "object": "Cube_ZXY",
+   "matrix_world": [
+    1.1396100521087646,
+    0.11467238515615463,
+    0.7174395322799683,
+    13.369271278381348,
+    0.38714855909347534,
+    0.6586856245994568,
+    -0.6257850527763367,
+    1.8256950378417969,
+    -0.8201067447662354,
+    0.47029367089271545,
+    0.7015300989151001,
+    -0.9128475189208984,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 10,
+   "object": "Cube_ZYX",
+   "matrix_world": [
+    0.9669795632362366,
+    -0.17903706431388855,
+    0.845525324344635,
+    16.369272232055664,
+    0.9104534983634949,
+    0.5617952942848206,
+    -0.43750807642936707,
+    1.8256950378417969,
+    -0.5976579189300537,
+    0.5661487579345703,
+    0.7015300989151001,
+    -0.9128475189208984,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 11,
+   "object": "Cube_XYZ",
+   "matrix_world": [
+    0.9232823848724365,
+    0.09819883108139038,
+    0.9261300563812256,
+    1.4650640487670898,
+    0.3275715708732605,
+    0.7411293983459473,
+    -0.3840559422969818,
+    1.9534187316894531,
+    -1.120466947555542,
+    0.297588586807251,
+    0.6508659720420837,
+    -0.9767093658447266,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 11,
+   "object": "Cube_XZY",
+   "matrix_world": [
+    0.9232823848724365,
+    0.19385777413845062,
+    0.8922241926193237,
+    4.46506404876709,
+    0.4976600408554077,
+    0.6273242831230164,
+    -0.6329629421234131,
+    1.9534187316894531,
+    -1.0559751987457275,
+    0.4651431739330292,
+    0.4818052649497986,
+    -0.9767093658447266,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 11,
+   "object": "Cube_YXZ",
+   "matrix_world": [
+    0.7127801179885864,
+    -0.22256852686405182,
+    0.9959018230438232,
+    7.46506404876709,
+    0.9208863377571106,
+    0.6273242831230164,
+    -0.11573878675699234,
+    1.9534187316894531,
+    -0.9268832206726074,
+    0.4521086812019348,
+    0.6508659720420837,
+    -0.9767093658447266,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 11,
+   "object": "Cube_YZX",
+   "matrix_world": [
+    0.9232823848724365,
+    -0.2690529525279999,
+    0.8480851650238037,
+    10.46506404876709,
+    0.9005271792411804,
+    0.6273242831230164,
+    -0.19316907227039337,
+    1.9534187316894531,
+    -0.7428324818611145,
+    0.42608627676963806,
+    0.8199266195297241,
+    -0.9767093658447266,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 11,
+   "object": "Cube_ZXY",
+   "matrix_world": [
+    1.1337846517562866,
+    0.14367036521434784,
+    0.7444075345993042,
+    13.46506404876709,
+    0.4116790294647217,
+    0.6273242831230164,
+    -0.6716198921203613,
+    1.9534187316894531,
+    -0.8719245791435242,
+    0.4830091595649719,
+    0.6508659720420837,
+    -0.9767093658447266,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 11,
+   "object": "Cube_ZYX",
+   "matrix_world": [
+    0.9232823848724365,
+    -0.17709699273109436,
+    0.8998803496360779,
+    16.465065002441406,
+    1.0049937963485718,
+    0.5135191679000854,
+    -0.44207605719566345,
+    1.9534187316894531,
+    -0.5939164161682129,
+    0.5936408638954163,
+    0.6508659720420837,
+    -0.9767093658447266,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 12,
+   "object": "Cube_XYZ",
+   "matrix_world": [
+    0.9060342311859131,
+    0.10617631673812866,
+    0.9430059194564819,
+    1.5,
+    0.32976946234703064,
+    0.7360237240791321,
+    -0.3892386853694916,
+    2.0,
+    -1.149066686630249,
+    0.2949502468109131,
+    0.631848931312561,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 12,
+   "object": "Cube_XZY",
+   "matrix_world": [
+    0.9060342311859131,
+    0.20743799209594727,
+    0.9043266773223877,
+    4.5,
+    0.5130301713943481,
+    0.6158009171485901,
+    -0.6467826962471008,
+    2.0,
+    -1.079769492149353,
+    0.4666462540626526,
+    0.45151472091674805,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 12,
+   "object": "Cube_YXZ",
+   "matrix_world": [
+    0.6806163787841797,
+    -0.2241332083940506,
+    1.0151340961456299,
+    7.5,
+    0.9490997791290283,
+    0.6158009171485901,
+    -0.10134072601795197,
+    2.0,
+    -0.9412602782249451,
+    0.45886117219924927,
+    0.631848931312561,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 12,
+   "object": "Cube_YZX",
+   "matrix_world": [
+    0.9060342311859131,
+    -0.27361610531806946,
+    0.8638156056404114,
+    10.5,
+    0.9292088747024536,
+    0.6158009171485901,
+    -0.18488141894340515,
+    2.0,
+    -0.7521123290061951,
+    0.4311884343624115,
+    0.8121832013130188,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 12,
+   "object": "Cube_ZXY",
+   "matrix_world": [
+    1.131451964378357,
+    0.15443246066570282,
+    0.753008246421814,
+    13.5,
+    0.4202497601509094,
+    0.6158009171485901,
+    -0.6882917881011963,
+    2.0,
+    -0.890621542930603,
+    0.48676466941833496,
+    0.631848931312561,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 12,
+   "object": "Cube_ZYX",
+   "matrix_world": [
+    0.9060342311859131,
+    -0.17587704956531525,
+    0.9192533493041992,
+    16.5,
+    1.0395801067352295,
+    0.4955781102180481,
+    -0.442425400018692,
+    2.0,
+    -0.590233325958252,
+    0.6028844714164734,
+    0.631848931312561,
+    -1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  }
+ ]
+}

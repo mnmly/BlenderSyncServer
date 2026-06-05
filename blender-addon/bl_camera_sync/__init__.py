@@ -31,10 +31,11 @@ import threading
 import time
 import math
 import logging
-from bpy.props import StringProperty, IntProperty, BoolProperty
+from bpy.props import StringProperty, IntProperty, BoolProperty, EnumProperty
 from bpy.types import Panel, Operator, PropertyGroup
 from mathutils import Matrix, Vector
 from .utils import append_modules_to_sys_path, background_install_packages, get_modules_path
+from .export import snapshot_object_graph
 
 logger = logging.getLogger(__name__)
 DEBUG = False  # toggle to enable per-send logging
@@ -80,6 +81,16 @@ class CameraSyncProperties(PropertyGroup):
         name="Send Only Explicit Keyframes",
         description="Only bake frames that contain explicit keyframes",
         default=False,
+    )
+    object_graph_scope: EnumProperty(
+        name="Object Scope",
+        description="Which objects to include in an Object Graph send",
+        items=[
+            ('VISIBLE', "Visible", "All visible objects in the scene"),
+            ('SELECTED', "Selected", "Only the selected objects"),
+            ('ALL', "All", "Every object in the scene"),
+        ],
+        default='VISIBLE',
     )
 
 
@@ -692,6 +703,36 @@ class CAMERA_SYNC_OT_send_camera_curves(Operator):
         return {'FINISHED'}
 
 
+class CAMERA_SYNC_OT_send_object_graph(Operator):
+    """Operator: export the animated object graph and enqueue ``object_graph``.
+
+    Sends per-object transform authoring data (keyframes, parenting,
+    constraints) plus a depsgraph-baked matrix fallback for objects the WABF
+    Core engine can't yet reproduce natively.
+    """
+    bl_idname = "camera_sync.send_object_graph"
+    bl_label = "Send Object Graph"
+
+    def execute(self, context):
+        props = context.scene.camera_sync_props
+        if not props.is_connected:
+            self.report({'WARNING'}, "Not connected")
+            return {'CANCELLED'}
+        data = snapshot_object_graph(context, scope=props.object_graph_scope)
+        if not data["objects"]:
+            self.report({'ERROR'}, "No objects in scope")
+            return {'CANCELLED'}
+        camera_sync_manager.enqueue({
+            "type": "object_graph",
+            "payload": data,
+            "timestamp": time.time(),
+        })
+        baked = sum(1 for o in data["objects"] if o["needs_bake"])
+        self.report({'INFO'},
+                    f"Object graph queued ({len(data['objects'])} objects, {baked} baked)")
+        return {'FINISHED'}
+
+
 class CAMERA_SYNC_OT_test_connection(Operator):
     """Operator: TCP-probe ``host:port`` to confirm the sync server is reachable."""
 
@@ -758,6 +799,11 @@ class CAMERA_SYNC_PT_panel(Panel):
                 box.operator("camera_sync.send_scene_info", icon='SCENE_DATA')
                 box.operator("camera_sync.send_camera_curves", icon='IPO_BEZIER')
 
+                box = layout.box()
+                box.label(text="Object Graph")
+                box.prop(props, "object_graph_scope")
+                box.operator("camera_sync.send_object_graph", icon='OUTLINER')
+
         box = layout.box()
         box.label(text="Advanced Settings")
         box.prop(props, "auto_reconnect")
@@ -781,6 +827,7 @@ classes = (
     CAMERA_SYNC_OT_send_manual,
     CAMERA_SYNC_OT_send_scene_info,
     CAMERA_SYNC_OT_send_camera_curves,
+    CAMERA_SYNC_OT_send_object_graph,
     CAMERA_SYNC_OT_test_connection,
     CAMERA_SYNC_PT_panel,
 )
