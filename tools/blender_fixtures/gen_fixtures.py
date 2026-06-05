@@ -340,6 +340,89 @@ def scene_limit_rotation():
     return "limit_rotation"
 
 
+def scene_copy_rotation_z():
+    """Copy Rotation, Z axis only — owner keeps its X/Y, takes target Z."""
+    reset_scene()
+    target = add_empty("Target", location=(0, 0, 0))
+    key(target, "rotation_euler", FRAME_START)
+    target.rotation_euler = (math.radians(50), math.radians(20), math.radians(80))
+    key(target, "rotation_euler", FRAME_END)
+
+    cube = add_cube("Rotator", location=(0, 0, 0))
+    cube.rotation_euler = (math.radians(20), math.radians(35), 0)  # static base (X/Y kept)
+    con = cube.constraints.new(type='COPY_ROTATION')
+    con.target = target
+    con.use_x = False
+    con.use_y = False
+    con.use_z = True
+    return "copy_rotation_z"
+
+
+def scene_copy_rotation_before():
+    """Copy Rotation, mix mode BEFORE (target * owner)."""
+    reset_scene()
+    target = add_empty("Target", location=(0, 0, 0))
+    key(target, "rotation_euler", FRAME_START)
+    target.rotation_euler = (0, 0, math.radians(90))
+    key(target, "rotation_euler", FRAME_END)
+
+    cube = add_cube("Rotator", location=(0, 0, 0))
+    cube.rotation_euler = (math.radians(30), 0, 0)  # static base
+    con = cube.constraints.new(type='COPY_ROTATION')
+    con.target = target
+    con.mix_mode = 'BEFORE'
+    return "copy_rotation_before"
+
+
+def scene_copy_rotation_order():
+    """Copy Rotation with an explicit (non-AUTO) euler order ZYX."""
+    reset_scene()
+    target = add_empty("Target", location=(0, 0, 0))
+    key(target, "rotation_euler", FRAME_START)
+    target.rotation_euler = (math.radians(35), math.radians(45), math.radians(25))
+    key(target, "rotation_euler", FRAME_END)
+
+    cube = add_cube("Rotator", location=(0, 0, 0))  # owner rotmode XYZ
+    con = cube.constraints.new(type='COPY_ROTATION')
+    con.target = target
+    con.euler_order = 'ZYX'
+    return "copy_rotation_order"
+
+
+def scene_track_to_influence():
+    """Track To at 0.5 influence (blended pose)."""
+    reset_scene()
+    target = add_empty("Target", location=(5, 0, 0))
+    key(target, "location", FRAME_START)
+    target.location = (5, 5, 3)
+    key(target, "location", FRAME_END)
+
+    cube = add_cube("Tracker", location=(0, 0, 0))
+    cube.rotation_euler = (math.radians(15), math.radians(10), 0)  # base pose to blend from
+    con = cube.constraints.new(type='TRACK_TO')
+    con.target = target
+    con.track_axis = 'TRACK_NEGATIVE_Z'
+    con.up_axis = 'UP_Y'
+    con.influence = 0.5
+    return "track_to_influence"
+
+
+def scene_copy_location_offset():
+    """Copy Location with offset + X inverted."""
+    reset_scene()
+    target = add_empty("Target", location=(0, 0, 0))
+    key(target, "location", FRAME_START)
+    target.location = (3, 2, 1)
+    key(target, "location", FRAME_END)
+
+    cube = add_cube("Copier", location=(1, 1, 1))  # base offset
+    con = cube.constraints.new(type='COPY_LOCATION')
+    con.target = target
+    con.use_offset = True
+    con.invert_x = True
+    return "copy_location_offset"
+
+
 def scene_driver():
     """Cube whose X is driven by a keyed empty's X (baked fallback)."""
     reset_scene()
@@ -378,6 +461,11 @@ SCENES = [
     scene_limit_location,
     scene_limit_rotation,
     scene_limit_scale,
+    scene_copy_rotation_z,
+    scene_copy_rotation_before,
+    scene_copy_rotation_order,
+    scene_track_to_influence,
+    scene_copy_location_offset,
     scene_driver,
 ]
 
