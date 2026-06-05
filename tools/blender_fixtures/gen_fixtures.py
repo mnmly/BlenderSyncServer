@@ -71,6 +71,14 @@ def add_empty(name, location=(0, 0, 0)):
     return obj
 
 
+def add_camera(name, location=(0, 0, 0)):
+    cam = bpy.data.cameras.new(name)
+    obj = bpy.data.objects.new(name, cam)
+    obj.location = location
+    bpy.context.collection.objects.link(obj)
+    return obj
+
+
 def key(obj, data_path, frame, interpolation='BEZIER'):
     obj.keyframe_insert(data_path=data_path, frame=frame)
     # Set interpolation on the just-inserted keys (slotted-action aware).
@@ -423,6 +431,22 @@ def scene_copy_location_offset():
     return "copy_location_offset"
 
 
+def scene_camera_track():
+    """A camera tracking a keyed empty (Track To) — camera convergence (Phase 5)."""
+    reset_scene()
+    target = add_empty("Target", location=(0, 0, 0))
+    key(target, "location", FRAME_START)
+    target.location = (3, 4, 1)
+    key(target, "location", FRAME_END)
+
+    cam = add_camera("Camera", location=(0, -7, 3))
+    con = cam.constraints.new(type='TRACK_TO')
+    con.target = target
+    con.track_axis = 'TRACK_NEGATIVE_Z'
+    con.up_axis = 'UP_Y'
+    return "camera_track"
+
+
 def scene_driver():
     """Cube whose X is driven by a keyed empty's X (baked fallback)."""
     reset_scene()
@@ -466,6 +490,7 @@ SCENES = [
     scene_copy_rotation_order,
     scene_track_to_influence,
     scene_copy_location_offset,
+    scene_camera_track,
     scene_driver,
 ]
 
