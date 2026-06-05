@@ -509,6 +509,7 @@
       ]
      }
     ],
+    "camera": null,
     "baked": null,
     "needs_bake": false
    },
@@ -1013,6 +1014,7 @@
       ]
      }
     ],
+    "camera": null,
     "baked": null,
     "needs_bake": false
    },
@@ -1517,6 +1519,7 @@
       ]
      }
     ],
+    "camera": null,
     "baked": null,
     "needs_bake": false
    },
@@ -2021,6 +2024,7 @@
       ]
      }
     ],
+    "camera": null,
     "baked": null,
     "needs_bake": false
    },
@@ -2525,6 +2529,7 @@
       ]
      }
     ],
+    "camera": null,
     "baked": null,
     "needs_bake": false
    },
@@ -3029,6 +3034,7 @@
       ]
      }
     ],
+    "camera": null,
     "baked": null,
     "needs_bake": false
    }

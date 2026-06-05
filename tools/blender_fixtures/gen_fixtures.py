@@ -447,6 +447,39 @@ def scene_camera_track():
     return "camera_track"
 
 
+def scene_camera_lens():
+    """A camera with an animated focal length + clip (camera intrinsics)."""
+    reset_scene()
+    cam = add_camera("Camera", location=(0, -7, 3))
+    cam.rotation_euler = (math.radians(65), 0, 0)
+    data = cam.data
+    data.lens = 35.0
+    data.clip_start = 0.1
+    data.clip_end = 100.0
+    data.keyframe_insert("lens", frame=FRAME_START)
+    data.keyframe_insert("clip_start", frame=FRAME_START)
+    data.lens = 85.0
+    data.clip_start = 1.5
+    data.keyframe_insert("lens", frame=FRAME_END)
+    data.keyframe_insert("clip_start", frame=FRAME_END)
+    return "camera_lens"
+
+
+def _vfov_deg(cam_data, aspect):
+    focal, sw, sh, fit = cam_data.lens, cam_data.sensor_width, cam_data.sensor_height, cam_data.sensor_fit
+    if fit == 'HORIZONTAL':
+        v = 2 * math.atan(math.tan(math.atan(sw / (2 * focal))) / aspect)
+        v = 2 * math.atan(math.tan(2 * math.atan(sw / (2 * focal)) / 2) / aspect)
+    elif fit == 'VERTICAL':
+        v = 2 * math.atan(sh / (2 * focal))
+    else:  # AUTO
+        if aspect > (sw / sh):
+            v = 2 * math.atan(math.tan(2 * math.atan(sw / (2 * focal)) / 2) / aspect)
+        else:
+            v = 2 * math.atan(sh / (2 * focal))
+    return math.degrees(v)
+
+
 def scene_driver():
     """Cube whose X is driven by a keyed empty's X (baked fallback)."""
     reset_scene()
@@ -491,6 +524,7 @@ SCENES = [
     scene_track_to_influence,
     scene_copy_location_offset,
     scene_camera_track,
+    scene_camera_lens,
     scene_driver,
 ]
 
@@ -507,13 +541,20 @@ def bake_golden(scene):
         for frame in range(FRAME_START, FRAME_END + 1):
             scene.frame_set(frame)
             dg = bpy.context.evaluated_depsgraph_get()
+            aspect = scene.render.resolution_x / max(scene.render.resolution_y, 1)
             for o in objs:
                 ev = o.evaluated_get(dg)
-                golden.append({
+                entry = {
                     "frame": frame,
                     "object": o.name,
                     "matrix_world": [float(v) for row in ev.matrix_world for v in row],
-                })
+                }
+                if o.type == 'CAMERA':
+                    cd = ev.data
+                    entry["vfov"] = _vfov_deg(cd, aspect)
+                    entry["near"] = cd.clip_start
+                    entry["far"] = cd.clip_end
+                golden.append(entry)
     finally:
         scene.frame_set(original)
     return golden

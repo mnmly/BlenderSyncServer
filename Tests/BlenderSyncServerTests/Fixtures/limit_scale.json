@@ -277,6 +277,7 @@
       ]
      }
     ],
+    "camera": null,
     "baked": null,
     "needs_bake": false
    }

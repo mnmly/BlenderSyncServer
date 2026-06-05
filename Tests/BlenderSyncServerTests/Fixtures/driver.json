@@ -251,6 +251,7 @@
       ]
      }
     ],
+    "camera": null,
     "baked": null,
     "needs_bake": false
    },
@@ -367,6 +368,7 @@
     "parent_type": "OBJECT",
     "constraints": [],
     "fcurves": [],
+    "camera": null,
     "baked": {
      "reason": "unsupported",
      "frames": [

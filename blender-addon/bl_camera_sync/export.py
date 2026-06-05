@@ -52,15 +52,10 @@ def _mat16(matrix):
     return [float(v) for row in matrix for v in row]
 
 
-def _export_fcurves(obj):
-    """Export every object-level transform/animation fcurve (source == "object").
-
-    Constraint-influence curves (``data_path`` like ``constraints["X"].influence``)
-    also live on the object's action and are included verbatim — harmless to a
-    consumer that only reads transform channels.
-    """
+def _export_fcurves_from(owner, source):
+    """Export every fcurve on an anim-data owner, tagged with `source`."""
     out = []
-    fcs = _fcurves_of(obj)
+    fcs = _fcurves_of(owner)
     if not fcs:
         return out
     for fc in fcs:
@@ -78,7 +73,7 @@ def _export_fcurves(obj):
                 "back": float(kf.back),
             })
         out.append({
-            "source": "object",
+            "source": source,
             "data_path": fc.data_path,
             "array_index": fc.array_index,
             "extrapolation": fc.extrapolation,
@@ -86,6 +81,31 @@ def _export_fcurves(obj):
             "keyframes": keyframes,
         })
     return out
+
+
+def _export_fcurves(obj):
+    """Object-level transform/animation fcurves (source == "object").
+
+    Constraint-influence curves (``data_path`` like ``constraints["X"].influence``)
+    also live on the object's action and are included verbatim.
+    """
+    return _export_fcurves_from(obj, "object")
+
+
+def _export_camera(obj):
+    """Camera intrinsics block (static + animated lens/sensor/clip) or None."""
+    if obj.type != 'CAMERA':
+        return None
+    cam = obj.data
+    return {
+        "focal_length": cam.lens,
+        "sensor_width": cam.sensor_width,
+        "sensor_height": cam.sensor_height,
+        "clip_start": cam.clip_start,
+        "clip_end": cam.clip_end,
+        "sensor_fit": cam.sensor_fit,
+        "fcurves": _export_fcurves_from(cam, "data"),
+    }
 
 
 # ---------------------------------------------------------------------------
@@ -244,6 +264,7 @@ def export_object(obj, scene, frame_start, frame_end, force_bake=False):
         "parent_type": obj.parent_type,
         "constraints": [_export_constraint(c) for c in obj.constraints],
         "fcurves": _export_fcurves(obj),
+        "camera": _export_camera(obj),
         "baked": baked,
         "needs_bake": needs_bake,
     }

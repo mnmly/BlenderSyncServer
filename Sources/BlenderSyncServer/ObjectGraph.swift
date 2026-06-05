@@ -72,6 +72,8 @@ public struct AnimObject: Codable, Sendable {
     public let constraints: [BlenderConstraint]
     /// Object-level fcurves (transform + constraint-influence channels).
     public let fcurves: [FCurve]
+    /// Camera intrinsics (static + animated lens/sensor/clip) for CAMERA objects.
+    public let camera: CameraIntrinsicsDTO?
     /// Depsgraph-baked per-frame matrices, present when ``needsBake`` is true.
     public let baked: BakedTrack?
     /// Addon's verdict: the Core engine can't reproduce this object from raw
@@ -211,6 +213,17 @@ public struct ConstraintParams: Codable, Sendable {
     public let offset: Double?
     public let offsetFactor: Double?
     public let forwardAxis: String?
+}
+
+/// Camera intrinsics: static lens/sensor/clip + their data-block fcurves.
+public struct CameraIntrinsicsDTO: Codable, Sendable {
+    public let focalLength: Double
+    public let sensorWidth: Double
+    public let sensorHeight: Double
+    public let clipStart: Double
+    public let clipEnd: Double
+    public let sensorFit: String
+    public let fcurves: [FCurve]
 }
 
 // MARK: - Baked fallback
