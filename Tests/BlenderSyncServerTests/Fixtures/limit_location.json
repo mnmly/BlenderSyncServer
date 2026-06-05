@@ -1,0 +1,551 @@
+{
+ "scene": "limit_location",
+ "wire": {
+  "frame_start": 1,
+  "frame_end": 12,
+  "fps": 24.0,
+  "render_width": 1920,
+  "render_height": 1080,
+  "render_aspect": 1.7777777777777777,
+  "objects": [
+   {
+    "name": "Limited",
+    "id": "Limited",
+    "type": "MESH",
+    "rotation_mode": "XYZ",
+    "base": {
+     "location": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "scale": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "rotation_euler": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation_quaternion": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation_axis_angle": [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+     ],
+     "delta_location": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "delta_scale": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "delta_rotation_euler": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "delta_rotation_quaternion": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "matrix_local": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ],
+     "matrix_world": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ]
+    },
+    "parent": null,
+    "parent_inverse": [
+     1.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    "parent_type": "OBJECT",
+    "constraints": [
+     {
+      "type": "LIMIT_LOCATION",
+      "name": "Limit Location",
+      "influence": 1.0,
+      "mute": false,
+      "target": null,
+      "subtarget": null,
+      "params": {
+       "target_space": "WORLD",
+       "owner_space": "WORLD",
+       "use_min_x": false,
+       "use_max_x": true,
+       "use_min_y": false,
+       "use_max_y": false,
+       "use_min_z": false,
+       "use_max_z": true,
+       "min_x": 0.0,
+       "max_x": 2.0,
+       "min_y": 0.0,
+       "max_y": 0.0,
+       "min_z": 0.0,
+       "max_z": 3.0,
+       "use_transform_limit": false
+      }
+     }
+    ],
+    "fcurves": [
+     {
+      "source": "object",
+      "data_path": "location",
+      "array_index": 0,
+      "extrapolation": "CONSTANT",
+      "has_modifiers": false,
+      "keyframes": [
+       {
+        "frame": 1.0,
+        "value": 0.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         -2.6666667461395264,
+         0.0
+        ],
+        "handle_right": [
+         4.6666669845581055,
+         0.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       },
+       {
+        "frame": 12.0,
+        "value": 5.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         8.333333015441895,
+         5.0
+        ],
+        "handle_right": [
+         15.666666984558105,
+         5.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       }
+      ]
+     },
+     {
+      "source": "object",
+      "data_path": "location",
+      "array_index": 1,
+      "extrapolation": "CONSTANT",
+      "has_modifiers": false,
+      "keyframes": [
+       {
+        "frame": 1.0,
+        "value": 0.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         -2.6666667461395264,
+         0.0
+        ],
+        "handle_right": [
+         4.6666669845581055,
+         0.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       },
+       {
+        "frame": 12.0,
+        "value": 5.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         8.333333015441895,
+         5.0
+        ],
+        "handle_right": [
+         15.666666984558105,
+         5.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       }
+      ]
+     },
+     {
+      "source": "object",
+      "data_path": "location",
+      "array_index": 2,
+      "extrapolation": "CONSTANT",
+      "has_modifiers": false,
+      "keyframes": [
+       {
+        "frame": 1.0,
+        "value": 0.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         -2.6666667461395264,
+         0.0
+        ],
+        "handle_right": [
+         4.6666669845581055,
+         0.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       },
+       {
+        "frame": 12.0,
+        "value": 5.0,
+        "interpolation": "BEZIER",
+        "easing": "AUTO",
+        "handle_left": [
+         8.333333015441895,
+         5.0
+        ],
+        "handle_right": [
+         15.666666984558105,
+         5.0
+        ],
+        "amplitude": 0.800000011920929,
+        "period": 4.099999904632568,
+        "back": 1.7015800476074219
+       }
+      ]
+     }
+    ],
+    "baked": null,
+    "needs_bake": false
+   }
+  ]
+ },
+ "golden": [
+  {
+   "frame": 1,
+   "object": "Limited",
+   "matrix_world": [
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 2,
+   "object": "Limited",
+   "matrix_world": [
+    1.0,
+    0.0,
+    0.0,
+    0.11645378172397614,
+    0.0,
+    1.0,
+    0.0,
+    0.11645378172397614,
+    0.0,
+    0.0,
+    1.0,
+    0.11645378172397614,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 3,
+   "object": "Limited",
+   "matrix_world": [
+    1.0,
+    0.0,
+    0.0,
+    0.43576252460479736,
+    0.0,
+    1.0,
+    0.0,
+    0.43576252460479736,
+    0.0,
+    0.0,
+    1.0,
+    0.43576252460479736,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 4,
+   "object": "Limited",
+   "matrix_world": [
+    1.0,
+    0.0,
+    0.0,
+    0.9128473401069641,
+    0.0,
+    1.0,
+    0.0,
+    0.9128473401069641,
+    0.0,
+    0.0,
+    1.0,
+    0.9128473401069641,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 5,
+   "object": "Limited",
+   "matrix_world": [
+    1.0,
+    0.0,
+    0.0,
+    1.5026293992996216,
+    0.0,
+    1.0,
+    0.0,
+    1.5026293992996216,
+    0.0,
+    0.0,
+    1.0,
+    1.5026293992996216,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 6,
+   "object": "Limited",
+   "matrix_world": [
+    1.0,
+    0.0,
+    0.0,
+    2.0,
+    0.0,
+    1.0,
+    0.0,
+    2.160029888153076,
+    0.0,
+    0.0,
+    1.0,
+    2.160029888153076,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 7,
+   "object": "Limited",
+   "matrix_world": [
+    1.0,
+    0.0,
+    0.0,
+    2.0,
+    0.0,
+    1.0,
+    0.0,
+    2.839970111846924,
+    0.0,
+    0.0,
+    1.0,
+    2.839970111846924,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 8,
+   "object": "Limited",
+   "matrix_world": [
+    1.0,
+    0.0,
+    0.0,
+    2.0,
+    0.0,
+    1.0,
+    0.0,
+    3.497370481491089,
+    0.0,
+    0.0,
+    1.0,
+    3.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 9,
+   "object": "Limited",
+   "matrix_world": [
+    1.0,
+    0.0,
+    0.0,
+    2.0,
+    0.0,
+    1.0,
+    0.0,
+    4.087152481079102,
+    0.0,
+    0.0,
+    1.0,
+    3.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 10,
+   "object": "Limited",
+   "matrix_world": [
+    1.0,
+    0.0,
+    0.0,
+    2.0,
+    0.0,
+    1.0,
+    0.0,
+    4.564237594604492,
+    0.0,
+    0.0,
+    1.0,
+    3.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 11,
+   "object": "Limited",
+   "matrix_world": [
+    1.0,
+    0.0,
+    0.0,
+    2.0,
+    0.0,
+    1.0,
+    0.0,
+    4.883546352386475,
+    0.0,
+    0.0,
+    1.0,
+    3.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "frame": 12,
+   "object": "Limited",
+   "matrix_world": [
+    1.0,
+    0.0,
+    0.0,
+    2.0,
+    0.0,
+    1.0,
+    0.0,
+    5.0,
+    0.0,
+    0.0,
+    1.0,
+    3.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  }
+ ]
+}

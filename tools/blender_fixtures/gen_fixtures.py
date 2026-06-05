@@ -231,6 +231,53 @@ def scene_child_of():
     return "child_of"
 
 
+def scene_copy_scale():
+    """Cube with Copy Scale → a keyed empty (per-axis scale)."""
+    reset_scene()
+    target = add_empty("Target", location=(0, 0, 0))
+    key(target, "scale", FRAME_START)
+    target.scale = (2.0, 0.5, 1.5)
+    key(target, "scale", FRAME_END)
+
+    cube = add_cube("Scaler", location=(0, 0, 0))
+    cube.rotation_euler = (math.radians(25), 0, math.radians(30))  # kept
+    con = cube.constraints.new(type='COPY_SCALE')
+    con.target = target
+    return "copy_scale"
+
+
+def scene_limit_location():
+    """Cube animated past a ceiling, clamped by Limit Location (world)."""
+    reset_scene()
+    cube = add_cube("Limited", location=(0, 0, 0))
+    key(cube, "location", FRAME_START)
+    cube.location = (5, 5, 5)
+    key(cube, "location", FRAME_END)
+    con = cube.constraints.new(type='LIMIT_LOCATION')
+    con.use_max_x = True
+    con.max_x = 2.0
+    con.use_max_z = True
+    con.max_z = 3.0
+    con.owner_space = 'WORLD'
+    return "limit_location"
+
+
+def scene_limit_scale():
+    """Cube animated to grow, clamped by Limit Scale (world)."""
+    reset_scene()
+    cube = add_cube("Limited", location=(0, 0, 0))
+    key(cube, "scale", FRAME_START)
+    cube.scale = (3, 3, 3)
+    key(cube, "scale", FRAME_END)
+    con = cube.constraints.new(type='LIMIT_SCALE')
+    con.use_max_x = True
+    con.max_x = 1.5
+    con.use_max_y = True
+    con.max_y = 2.0
+    con.owner_space = 'WORLD'
+    return "limit_scale"
+
+
 def scene_damped_track():
     """Cube with Damped Track → a keyed empty (track Y, shortest-arc)."""
     reset_scene()
@@ -276,8 +323,11 @@ SCENES = [
     scene_track_to,
     scene_copy_location,
     scene_copy_transforms,
+    scene_copy_scale,
     scene_child_of,
     scene_damped_track,
+    scene_limit_location,
+    scene_limit_scale,
     scene_driver,
 ]
 
