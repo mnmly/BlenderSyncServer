@@ -79,6 +79,31 @@ def add_camera(name, location=(0, 0, 0)):
     return obj
 
 
+def add_curve(name, spline_type, points, location=(0, 0, 0), dimensions='3D'):
+    """Create a CURVE object with one spline of `spline_type`.
+
+    `points` are `(x, y, z)` tuples. BEZIER points get auto handles; POLY/NURBS
+    points are stored as 4D `(x, y, z, w=1)`.
+    """
+    cu = bpy.data.curves.new(name, 'CURVE')
+    cu.dimensions = dimensions
+    sp = cu.splines.new(spline_type)
+    if spline_type == 'BEZIER':
+        sp.bezier_points.add(len(points) - 1)
+        for p, (x, y, z) in zip(sp.bezier_points, points):
+            p.co = (x, y, z)
+            p.handle_left_type = 'AUTO'
+            p.handle_right_type = 'AUTO'
+    else:
+        sp.points.add(len(points) - 1)  # poly/nurbs splines start with 1 point
+        for p, (x, y, z) in zip(sp.points, points):
+            p.co = (x, y, z, 1.0)
+    obj = bpy.data.objects.new(name, cu)
+    obj.location = location
+    bpy.context.collection.objects.link(obj)
+    return obj
+
+
 def key(obj, data_path, frame, interpolation='BEZIER'):
     obj.keyframe_insert(data_path=data_path, frame=frame)
     # Set interpolation on the just-inserted keys (slotted-action aware).
@@ -503,6 +528,84 @@ def scene_driver():
     return "driver"
 
 
+def scene_curve_splines():
+    """Three standalone curves — Bezier, NURBS, Poly — exercising spline export.
+
+    Static (no animation); the value under test is the `curve` data-block in the
+    wire payload, not motion. Golden still bakes each object's matrix_world.
+    """
+    reset_scene()
+    pts = [(0, 0, 0), (1, 1.5, 0), (2, 1.0, 0.5), (3, 2.0, 0)]
+    add_curve("Curve_Bezier", 'BEZIER', pts, location=(0, 0, 0))
+    add_curve("Curve_Nurbs", 'NURBS', pts, location=(5, 0, 0))
+    add_curve("Curve_Poly", 'POLY', pts, location=(10, 0, 0))
+    return "curve_splines"
+
+
+def scene_curve_follow_path():
+    """Cube on a Follow Path constraint over a NURBS curve with animated eval_time.
+
+    Exercises `use_path` / `path_duration` / `eval_time` plus the curve
+    data-block fcurve (animated eval_time → source == "data"). The follower's
+    motion falls back to the baked matrix track.
+    """
+    reset_scene()
+    path = add_curve(
+        "Path", 'NURBS',
+        [(0, 0, 0), (3, 2, 0), (6, -1, 1), (9, 1, 0)],
+        location=(0, 0, 0),
+    )
+    cu = path.data
+    cu.use_path = True
+    cu.path_duration = FRAME_END
+    # Animate the path evaluation so a follower sweeps along it.
+    cu.eval_time = 0.0
+    cu.keyframe_insert("eval_time", frame=FRAME_START)
+    cu.eval_time = float(FRAME_END)
+    cu.keyframe_insert("eval_time", frame=FRAME_END)
+
+    cube = add_cube("Follower", location=(0, 0, 0))
+    con = cube.constraints.new('FOLLOW_PATH')
+    con.target = path
+    con.use_curve_follow = True
+    return "curve_follow_path"
+
+
+def scene_curve_follow_path_poly():
+    """Cube on a Follow Path over a POLY curve with animated eval_time + curve
+    follow. POLY sampling is near-exact, so this isolates the Follow Path
+    *orientation* (forward/up axis → tangent/normal) from NURBS-knot fidelity.
+    """
+    reset_scene()
+    # A smooth (corner-free) diagonal poly so the tangent is constant: this
+    # isolates the Follow Path orientation (forward/up axis → tangent/+Z) from
+    # any sharp-corner tangent-smoothing in the arc-length sampler.
+    path = add_curve(
+        "Path", 'POLY',
+        [(0, 0, 0), (2, 1.5, 0), (4, 3, 0)],
+        location=(0, 0, 0),
+    )
+    cu = path.data
+    cu.use_path = True
+    cu.path_duration = FRAME_END
+    cu.eval_time = 0.0
+    cu.keyframe_insert("eval_time", frame=FRAME_START)
+    cu.eval_time = float(FRAME_END)
+    cu.keyframe_insert("eval_time", frame=FRAME_END)
+    # Linear eval_time so factor maps straight to arc length.
+    for fc in (obj_export._fcurves_of(cu) or []):
+        for kf in fc.keyframe_points:
+            kf.interpolation = 'LINEAR'
+
+    cube = add_cube("Follower", location=(0, 0, 0))
+    con = cube.constraints.new('FOLLOW_PATH')
+    con.target = path
+    con.use_curve_follow = True
+    con.forward_axis = 'FORWARD_X'
+    con.up_axis = 'UP_Z'
+    return "curve_follow_path_poly"
+
+
 SCENES = [
     scene_euler_orders,
     scene_quat_axisangle,
@@ -526,6 +629,9 @@ SCENES = [
     scene_camera_track,
     scene_camera_lens,
     scene_driver,
+    scene_curve_splines,
+    scene_curve_follow_path,
+    scene_curve_follow_path_poly,
 ]
 
 

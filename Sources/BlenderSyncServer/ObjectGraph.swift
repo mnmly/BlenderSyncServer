@@ -74,6 +74,9 @@ public struct AnimObject: Codable, Sendable {
     public let fcurves: [FCurve]
     /// Camera intrinsics (static + animated lens/sensor/clip) for CAMERA objects.
     public let camera: CameraIntrinsicsDTO?
+    /// Curve data-block (splines + path/timing) for CURVE objects; nil otherwise.
+    /// The control geometry a Follow Path constraint targeting this object evaluates.
+    public let curve: BlenderCurve?
     /// Depsgraph-baked per-frame matrices, present when ``needsBake`` is true.
     public let baked: BakedTrack?
     /// Addon's verdict: the Core engine can't reproduce this object from raw

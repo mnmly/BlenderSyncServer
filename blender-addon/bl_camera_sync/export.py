@@ -109,6 +109,73 @@ def _export_camera(obj):
 
 
 # ---------------------------------------------------------------------------
+# Curves (NURBS / Bezier / Poly paths)
+# ---------------------------------------------------------------------------
+
+def _export_spline(spline):
+    """Serialize one spline of a curve data-block.
+
+    Point geometry is split by ``type``: BEZIER splines expose
+    ``bezier_points`` (with handles); POLY/NURBS expose ``points`` whose
+    ``co`` is 4D ``(x, y, z, w)`` — ``w`` is the rational NURBS weight.
+    """
+    out = {
+        "type": spline.type,                 # 'POLY' | 'BEZIER' | 'NURBS'
+        "use_cyclic_u": spline.use_cyclic_u,
+        "resolution_u": spline.resolution_u,
+        "order_u": spline.order_u,            # NURBS basis order; benign for others
+        "use_endpoint_u": spline.use_endpoint_u,
+        "use_bezier_u": spline.use_bezier_u,
+    }
+    if spline.type == 'BEZIER':
+        out["bezier_points"] = [
+            {
+                "co": list(p.co),                       # (x, y, z)
+                "handle_left": list(p.handle_left),
+                "handle_right": list(p.handle_right),
+                "handle_left_type": p.handle_left_type,
+                "handle_right_type": p.handle_right_type,
+                "tilt": p.tilt,
+                "radius": p.radius,
+            }
+            for p in spline.bezier_points
+        ]
+    else:
+        out["points"] = [
+            {
+                "co": list(p.co),                       # (x, y, z, w) — w is NURBS weight
+                "tilt": p.tilt,
+                "radius": p.radius,
+                "weight": p.weight,
+            }
+            for p in spline.points
+        ]
+    return out
+
+
+def _export_curve(obj):
+    """Curve data-block (splines + path/timing settings) for CURVE objects, else None.
+
+    ``use_path`` / ``path_duration`` / ``eval_time`` drive Follow Path timing;
+    the splines are the control geometry needed to evaluate the path.
+    """
+    if obj.type != 'CURVE':
+        return None
+    cu = obj.data
+    return {
+        "dimensions": cu.dimensions,         # '2D' | '3D'
+        "resolution_u": cu.resolution_u,
+        "use_path": cu.use_path,
+        "path_duration": cu.path_duration,
+        "eval_time": cu.eval_time,
+        "bevel_depth": cu.bevel_depth,
+        "extrude": cu.extrude,
+        "splines": [_export_spline(s) for s in cu.splines],
+        "fcurves": _export_fcurves_from(cu, "data"),
+    }
+
+
+# ---------------------------------------------------------------------------
 # Constraints
 # ---------------------------------------------------------------------------
 
@@ -171,6 +238,10 @@ _SOLVED_CONSTRAINTS = frozenset({
     "CHILD_OF", "COPY_LOCATION", "COPY_ROTATION", "COPY_SCALE", "COPY_TRANSFORMS",
     "TRACK_TO", "DAMPED_TRACK", "LOCKED_TRACK",
     "LIMIT_LOCATION", "LIMIT_ROTATION", "LIMIT_SCALE",
+    # Follow Path is reproduced natively by WABFCoreKit's solver + the TinySpline
+    # curve sampler (the curve geometry rides along in the object graph), so its
+    # objects no longer force the baked-matrix fallback.
+    "FOLLOW_PATH",
 })
 
 
@@ -265,6 +336,7 @@ def export_object(obj, scene, frame_start, frame_end, force_bake=False):
         "constraints": [_export_constraint(c) for c in obj.constraints],
         "fcurves": _export_fcurves(obj),
         "camera": _export_camera(obj),
+        "curve": _export_curve(obj),
         "baked": baked,
         "needs_bake": needs_bake,
     }

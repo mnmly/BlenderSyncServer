@@ -381,6 +381,7 @@
      }
     ],
     "camera": null,
+    "curve": null,
     "baked": null,
     "needs_bake": false
    },
@@ -538,6 +539,7 @@
     ],
     "fcurves": [],
     "camera": null,
+    "curve": null,
     "baked": null,
     "needs_bake": false
    }

@@ -187,4 +187,94 @@ final class ObjectGraphFixtureTests: XCTestCase {
         }
         XCTAssertEqual(g.objects.count, fx.wire.objects.count)
     }
+
+    // MARK: - Curve geometry
+
+    /// A CURVE data-block decodes from the addon's snake_case wire form, with
+    /// BEZIER and NURBS splines split into their respective point arrays.
+    func testCurveGeometryDecodes() throws {
+        let json = """
+        {
+          "dimensions": "3D",
+          "resolution_u": 12,
+          "use_path": true,
+          "path_duration": 100,
+          "eval_time": 25.0,
+          "bevel_depth": 0.0,
+          "extrude": 0.0,
+          "splines": [
+            {
+              "type": "BEZIER",
+              "use_cyclic_u": false, "resolution_u": 12, "order_u": 4,
+              "use_endpoint_u": true, "use_bezier_u": false,
+              "bezier_points": [
+                {"co":[0,0,0],"handle_left":[-1,0,0],"handle_right":[1,0,0],
+                 "handle_left_type":"ALIGNED","handle_right_type":"ALIGNED","tilt":0.0,"radius":1.0},
+                {"co":[2,0,0],"handle_left":[1,0,0],"handle_right":[3,0,0],
+                 "handle_left_type":"ALIGNED","handle_right_type":"ALIGNED","tilt":0.0,"radius":1.0}
+              ]
+            },
+            {
+              "type": "NURBS",
+              "use_cyclic_u": false, "resolution_u": 12, "order_u": 3,
+              "use_endpoint_u": true, "use_bezier_u": false,
+              "points": [
+                {"co":[0,0,0,1],"tilt":0.0,"radius":1.0,"weight":1.0},
+                {"co":[1,2,0,2],"tilt":0.0,"radius":1.0,"weight":2.0},
+                {"co":[3,0,0,1],"tilt":0.0,"radius":1.0,"weight":1.0}
+              ]
+            }
+          ],
+          "fcurves": []
+        }
+        """
+        let dec = JSONDecoder()
+        dec.keyDecodingStrategy = .convertFromSnakeCase
+        let curve = try dec.decode(BlenderCurve.self, from: Data(json.utf8))
+
+        XCTAssertEqual(curve.dimensions, "3D")
+        XCTAssertEqual(curve.pathDuration, 100)
+        XCTAssertEqual(curve.evalTime, 25.0, accuracy: 1e-9)
+        XCTAssertEqual(curve.splines.count, 2)
+
+        let bez = curve.splines[0]
+        XCTAssertEqual(bez.type, "BEZIER")
+        XCTAssertNil(bez.points)
+        let bp = try XCTUnwrap(bez.bezierPoints)
+        XCTAssertEqual(bp.count, 2)
+        XCTAssertEqual(bp[0].handleRight, [1, 0, 0])
+        XCTAssertEqual(bp[0].handleLeftType, "ALIGNED")
+
+        let nurbs = curve.splines[1]
+        XCTAssertEqual(nurbs.type, "NURBS")
+        XCTAssertEqual(nurbs.orderU, 3)
+        XCTAssertTrue(nurbs.useEndpointU)
+        XCTAssertNil(nurbs.bezierPoints)
+        let pts = try XCTUnwrap(nurbs.points)
+        XCTAssertEqual(pts.count, 3)
+        XCTAssertEqual(pts[1].weight, 2.0, accuracy: 1e-9)        // rational weight preserved
+        XCTAssertEqual(pts[1].position, [1, 2, 0])               // 4-D co → 3-D position
+
+        // No eval_time f-curve → static eval_time.
+        XCTAssertEqual(curve.evaluatedEvalTime(atFrame: 50), 25.0, accuracy: 1e-9)
+    }
+
+    /// `evaluatedEvalTime` follows the animated `eval_time` f-curve when keyed,
+    /// and falls back to the static value otherwise.
+    func testCurveEvalTimeFollowsFcurve() {
+        let kf = Keyframe(frame: 10, value: 4.0, interpolation: .linear, easing: .auto,
+                          handleLeft: [9, 4], handleRight: [11, 4])
+        let fc = FCurve(source: "data", dataPath: "eval_time", arrayIndex: 0,
+                        extrapolation: .constant, hasModifiers: false, keyframes: [kf])
+        let keyed = BlenderCurve(dimensions: "3D", resolutionU: 12, usePath: true,
+                                 pathDuration: 100, evalTime: 25, bevelDepth: 0, extrude: 0,
+                                 splines: [], fcurves: [fc])
+        // At the keyframe frame the f-curve wins over the static value.
+        XCTAssertEqual(keyed.evaluatedEvalTime(atFrame: 10), 4.0, accuracy: 1e-9)
+
+        let unkeyed = BlenderCurve(dimensions: "3D", resolutionU: 12, usePath: true,
+                                   pathDuration: 100, evalTime: 25, bevelDepth: 0, extrude: 0,
+                                   splines: [], fcurves: [])
+        XCTAssertEqual(unkeyed.evaluatedEvalTime(atFrame: 10), 25.0, accuracy: 1e-9)
+    }
 }
