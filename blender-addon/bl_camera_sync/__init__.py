@@ -36,6 +36,7 @@ from bpy.types import Panel, Operator, PropertyGroup
 from mathutils import Matrix, Vector
 from .utils import append_modules_to_sys_path, background_install_packages, get_modules_path
 from .export import snapshot_object_graph
+from .reference_plane import CAMERA_SYNC_OT_import_reference_plane
 
 logger = logging.getLogger(__name__)
 DEBUG = False  # toggle to enable per-send logging
@@ -804,6 +805,11 @@ class CAMERA_SYNC_PT_panel(Panel):
                 box.prop(props, "object_graph_scope")
                 box.operator("camera_sync.send_object_graph", icon='OUTLINER')
 
+        # WABF → Blender reference plane import (file-based, no connection needed).
+        box = layout.box()
+        box.label(text="Reference Plane")
+        box.operator("camera_sync.import_reference_plane", icon='IMAGE_PLANE')
+
         box = layout.box()
         box.label(text="Advanced Settings")
         box.prop(props, "auto_reconnect")
@@ -829,6 +835,7 @@ classes = (
     CAMERA_SYNC_OT_send_camera_curves,
     CAMERA_SYNC_OT_send_object_graph,
     CAMERA_SYNC_OT_test_connection,
+    CAMERA_SYNC_OT_import_reference_plane,
     CAMERA_SYNC_PT_panel,
 )
 
