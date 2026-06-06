@@ -256,8 +256,13 @@ public final class WebSocketConnection<Incoming: Codable & Sendable, Outgoing: C
     
     private func handlePingFrame(_ frame: WebSocketFrame) async {
         guard channel.isActive else { return }
-        
-        let pongFrame = WebSocketFrame(fin: true, opcode: .pong, data: frame.data)
+
+        // A pong MUST echo the ping's *application* payload. Client→server frames
+        // are masked on the wire, so reply with the unmasked bytes — sending the
+        // raw masked `frame.data` produces a payload mismatch that the `websockets`
+        // client treats as an unsolicited pong, so its keep-alive ping times out
+        // and it drops the connection every ~ping_interval+ping_timeout (~40s).
+        let pongFrame = WebSocketFrame(fin: true, opcode: .pong, data: frame.unmaskedData)
         try? await channel.writeAndFlush(pongFrame)
     }
     

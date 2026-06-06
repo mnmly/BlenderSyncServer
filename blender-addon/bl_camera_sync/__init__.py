@@ -451,6 +451,7 @@ class CameraSyncManager:
         self.max_reconnect_attempts = 5
         self.reconnect_delay = 2.0
         self.last_sync_time = 0
+        self.auto_reconnect = True
         self._timer_active = False
 
     # ----- main-thread side -----
@@ -554,26 +555,46 @@ class CameraSyncManager:
             if not self.is_running:
                 break
 
-            # Auto-reconnect handling — read prop via timer? Simpler: assume on.
+            # Auto-reconnect: `auto_reconnect` is snapshotted on the main thread
+            # in start_connection() (reading bpy props off-thread is unsafe).
+            if not self.auto_reconnect:
+                logger.info("connection dropped; auto-reconnect disabled")
+                break
+
             self.reconnect_attempts += 1
             if self.reconnect_attempts > self.max_reconnect_attempts:
                 logger.warning("max reconnect attempts reached")
                 break
+            logger.info(
+                f"reconnecting in {self.reconnect_delay:.1f}s "
+                f"(attempt {self.reconnect_attempts}/{self.max_reconnect_attempts})"
+            )
             await asyncio.sleep(self.reconnect_delay)
             self.reconnect_delay = min(self.reconnect_delay * 1.5, 30.0)
 
+        # The background thread is about to exit. Clear is_running so a later
+        # Connect (after a server crash exhausts retries) isn't a silent no-op.
+        self.is_running = False
         self.set_connected_main_thread(False)
 
     # ----- lifecycle -----
 
-    def start_connection(self, host, port):
+    def start_connection(self, host, port, auto_reconnect=True):
         """Spawn the asyncio thread and main-thread snapshot timer.
 
-        No-op if already running.
+        No-op if a connection thread is genuinely still running. `auto_reconnect`
+        is captured here (on the main thread) and read by the background loop,
+        since reading `bpy` props off the main thread is unsafe.
         """
-        if self.is_running:
+        # Guard only against a live thread. After a server crash exhausts
+        # retries the loop clears is_running and the thread dies, so we must
+        # not block a fresh Connect on a stale flag.
+        if self.is_running and self.thread and self.thread.is_alive():
             return
         self.is_running = True
+        self.auto_reconnect = auto_reconnect
+        self.reconnect_attempts = 0
+        self.reconnect_delay = 2.0
         self.last_dedup_key = None
 
         def run_loop():
@@ -617,7 +638,9 @@ class CAMERA_SYNC_OT_connect(Operator):
         if props.is_connected:
             self.report({'WARNING'}, "Already connected")
             return {'CANCELLED'}
-        camera_sync_manager.start_connection(props.host, props.port)
+        camera_sync_manager.start_connection(
+            props.host, props.port, auto_reconnect=props.auto_reconnect
+        )
         self.report({'INFO'}, f"Connecting to {props.host}:{props.port}…")
         return {'FINISHED'}
 
